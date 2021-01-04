@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black-color: #333333;
+  --white-color: #ffffff;
+  --purple-color: #9D5CD0;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+main {
+  transform: translateY(-70px);
+}
+
+.second-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 65.37px;
+}
+
+.third-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32.68px;
+}
+
+.black-heading {
+  color: var(--black-color);
+}
+
+.white-heading {
+  color: var(--white-color);
+}
+
+/* Header */
+.header-top-content {
+  width: 100%;
+  background-color: #000000;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  font-size: 18px;
+  line-height: 24.51px;
+  font-weight: 600;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.nav-link {
+  color: var(--white-color);
+}
+
+.enter-link {
+  margin-left: 279px;
+  font-size: 18px;
+  line-height: 24.51px;
+  border: 0;
+  color: var(--white-color);
+}
+
+.header-bottom-content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}
+
+.bottom-menu-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-menu-item {
+  font-size: 18px;
+  line-height: 24.51px;
+}
+
+.bottom-menu-item:not(:last-child) {
+  margin-right: 97px;
+}
+
+.bottom-menu-link {
+  padding-right: 15.07px;
+  color: var(--white-color);
+  background: url("../img/menu-icon.png") no-repeat 100%;
+}
+
+.search-icon {
+  width: 22.1px;
+  height: 21.62px;
+  transform: translateY(7px);
+}
+
+.search-input {
+  width: 218px;
+  padding-left: 0;
+  padding-bottom: 3px;
+  border: 0;
+  border-bottom: 1px solid var(--white-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-input::placeholder {
+  font-size: 18px;
+  line-height: 24.51px;
+  color: var(--white-color);
+}
+
+/* Hero */
+.section-hero {
+  width: 100%;
+  height: 700px;
+  /*transform: translateY(-70px);*/
+  background: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg") no-repeat 40% 100%;
+  background-size: cover;
+}
+
+.hero {
+  padding-top: 133px;
+}
+
+.main-heading {
+  width: 560px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 82.8px;
+  color: var(--white-color);
+}
+
+.hero-description {
+  width: 579px;
+  margin-bottom: 92px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--white-color);
+}
+
+.subscribe-btn {
+  width: 314px;
+  height: 70px;
+  padding: 17px 35px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24.51px;
+  color: var(--white-color);
+  background-color: var(--purple-color);
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+/* About Us */
+.about-us-description {
+  width: 1020px;
+  /*height: 214px;*/
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+/* Gallery */
+.section-gallery {
+  width: 100%;
+  height: 995px;
+  background: url("../img/birmingham-museums-gallery.jpg") no-repeat;
+}
+
+.gallery-content-blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-left-block {
+  width: 401px;
+  padding-top: 80px;
+}
+
+.filter-description {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white-color);
+}
+
+.filter-select {
+  margin-top: 20px;
+  width: 400px;
+}
+
+.gallery-authorisation-description {
+  width: 370px;
+  margin-top: 554px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  word-wrap: break-word;
+  color: var(--white-color);
+}
+
+.authorisation-link {
+  color: var(--purple-color);
+}
+
+/* Catalog */
+.catalog-heading {
+  display: flex;
+  /*align-items: center;*/
+}
+
+.catalog-languages-list {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 41px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.language-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.language-btn {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50px;
+}
+
+.french-btn {
+  background: url("../img/french.png") no-repeat;
+}
+
+.german-btn {
+  background: url("../img/german.png") no-repeat;
+}
+
+.italian-btn {
+  background: url("../img/italian.png") no-repeat;
+}
+
+.russian-btn {
+  background: url("../img/russian.png") no-repeat;
+}
+
+.belgian-btn {
+  background: url("../img/belgian.png") no-repeat;
+}
+
+.catalog-description {
+  width: 1030px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.catalog-content-blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-left-block {
+  width: 750px;
+}
+
+.catalog-image {
+  margin-bottom: 30px;
+}
