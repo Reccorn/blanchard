@@ -23,7 +23,7 @@
 :root {
   --black-color: #333333;
   --white-color: #ffffff;
-  --purple-color: #9D5CD0;
+  --purple-color: #9d5cd0;
 }
 
 html {
@@ -46,13 +46,14 @@ ul {
 }
 
 .container {
-  width: 1680px;
+  width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 section {
   margin-bottom: 80px;
+  align-items: center;
 }
 
 main {
@@ -67,13 +68,13 @@ main {
   line-height: 65.37px;
 }
 
-.third-heading {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32.68px;
-}
+/*.third-heading {*/
+/*  margin-top: 0;*/
+/*  margin-bottom: 0;*/
+/*  font-weight: 600;*/
+/*  font-size: 24px;*/
+/*  line-height: 32.68px;*/
+/*}*/
 
 .black-heading {
   color: var(--black-color);
@@ -85,7 +86,9 @@ main {
 
 /* Header */
 .header-top-content {
-  width: 100%;
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #000000;
 }
 
@@ -125,7 +128,9 @@ main {
 
 .header-bottom-content {
   position: relative;
-  width: 100%;
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -181,8 +186,10 @@ main {
 
 /* Hero */
 .section-hero {
-  width: 100%;
+  width: 1920px;
   height: 700px;
+  margin-left: auto;
+  margin-right: auto;
   /*transform: translateY(-70px);*/
   background: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg") no-repeat 40% 100%;
   background-size: cover;
@@ -237,9 +244,12 @@ main {
 
 /* Gallery */
 .section-gallery {
-  width: 100%;
+  width: 1920px;
   height: 995px;
+  margin-left: auto;
+  margin-right: auto;
   background: url("../img/birmingham-museums-gallery.jpg") no-repeat;
+  background-size: contain;
 }
 
 .gallery-content-blocks {
@@ -341,4 +351,160 @@ main {
 
 .catalog-image {
   margin-bottom: 30px;
+}
+
+.author-heading {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32.68px;
+}
+
+.years-of-life {
+  font-size: 12px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.author-description {
+  width: 700px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 21.79px;
+}
+
+/* Events */
+.events-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-item {
+  width: calc((100% - 100px) / 3);
+}
+
+.event-image-field {
+  width: 100%;
+  height: 300px;
+}
+
+.gravure-image {
+  background: url("../img/gravure.jpg") no-repeat;
+  background-size: cover;
+}
+
+.mosaic-image {
+  background: url("../img/mosaic.jpg") no-repeat;
+  background-size: cover;
+}
+
+.hall-image {
+  background: url("../img/hall.jpg") no-repeat;
+  background-size: cover;
+}
+
+.event-data {
+  position: relative;
+  height: 400px;
+  padding: 13px 19px 43px 50px;
+  border: 1px solid #cacaca;
+  border-top: 0;
+}
+
+.event-under-image-text {
+  text-align: right;
+  font-size: 12px;
+  line-height: 16.34px;
+  color: #999999;
+}
+
+.event-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32.68px;
+}
+
+.event-description {
+  width: 385px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 32px;
+  word-break: break-word;
+}
+
+.more-about-event {
+  position: absolute;
+  top: 327px;
+}
+
+.all-events {
+  display: block;
+  width: 190px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 17px 35px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24.51px;
+  color: var(--purple-color);
+  background-color: var(--white-color);
+  border: 2px solid var(--purple-color);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+/* Publications */
+.section-publications {
+  width: 1920px;
+  height: 766px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("../img/birmingham-museums-publications.jpg") no-repeat;
+}
+
+.publications-content-blocks {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.publications-left-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-form-heading {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white-color);
+}
+
+.publications-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category-name {
+  padding-left: 25px;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white-color);
+}
+
+.price-inputs-form {
+  margin-top: 25px;
+}
+
+.price-label {
+  margin-top: 13px;
 }
