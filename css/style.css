@@ -852,6 +852,15 @@ section:not(:last-child) {
   width: 1220px;
 }
 
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
 /* Footer */
 .footer {
   width: 100%;
