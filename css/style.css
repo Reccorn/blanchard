@@ -244,7 +244,7 @@ section:not(:last-child) {
 }
 
 .main-heading {
-  width: 560px;
+  width: 570px;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 700;
@@ -424,30 +424,37 @@ section:not(:last-child) {
 }
 
 .language-btn {
-  width: 46px;
-  height: 46px;
+  width: 66px;
+  height: 66px;
+  padding: 10px;
   border: 0;
   border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-btn-active {
+  border: 2px solid var(--purple-color);
 }
 
 .french-btn {
-  background: url("../img/french.png") no-repeat;
+  background: url("../img/french.png") no-repeat 45% 50%;
 }
 
 .german-btn {
-  background: url("../img/german.png") no-repeat;
+  background: url("../img/german.png") no-repeat 45% 50%;
 }
 
 .italian-btn {
-  background: url("../img/italian.png") no-repeat;
+  background: url("../img/italian.png") no-repeat 45% 50%;
 }
 
 .russian-btn {
-  background: url("../img/russian.png") no-repeat;
+  background: url("../img/russian.png") no-repeat 45% 50%;
 }
 
 .belgian-btn {
-  background: url("../img/belgian.png") no-repeat;
+  background: url("../img/belgian.png") no-repeat 45% 50%;
 }
 
 .catalog-description {
@@ -458,8 +465,12 @@ section:not(:last-child) {
 }
 
 .catalog-content-blocks {
-  display: flex;
+  display: none;
   justify-content: space-between;
+}
+
+.catalog-content-active {
+  display: flex;
 }
 
 .catalog-left-block {
@@ -490,6 +501,81 @@ section:not(:last-child) {
   margin-bottom: 0;
   font-size: 16px;
   line-height: 21.79px;
+}
+
+.catalog-right-block {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.ages-item {
+  width: 100%;
+  align-items: center;
+}
+
+.ages-item:first-child {
+  border-top: 1px solid #cacaca;
+}
+
+.catalog-ages .ui-accordion-header {
+  position: relative;
+  /*padding: 0;*/
+  padding-top: 38px;
+  padding-bottom: 38px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--black-color);
+  border-bottom: 1px solid #cacaca;
+  outline: none;
+  cursor: pointer;
+  transition: border-bottom-color .4s ease-in-out;
+}
+
+.catalog-ages .ui-accordion-content {
+  padding-top: 25px;
+  padding-bottom: 38px;
+  font-size: 16px;
+  line-height: 32px;
+  border-bottom: 1px solid var(--purple-color);
+  color: var(--black-color);
+}
+
+.catalog-ages .ui-accordion-header-active {
+  border-bottom: 1px solid var(--purple-color);
+}
+
+.catalog-ages .ui-accordion-header .ui-accordion-header-icon {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: url("../img/accordion-icon.svg") no-repeat 51% 48% #ececec;
+  border-radius: 50% 50%;
+  transition: .4s ease-in-out;
+}
+
+.catalog-ages .ui-accordion-header-active .ui-accordion-header-icon {
+  transform: rotate(180deg);
+}
+
+.authors-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 290px;
+}
+
+.author-link {
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--black-color);
+}
+
+.author-chosen {
+  font-weight: 600;
+  color: var(--purple-color);
 }
 
 /* Events */
@@ -616,11 +702,49 @@ section:not(:last-child) {
   justify-content: space-between;
 }
 
-.category-name {
+.category-label {
+  position: relative;
   padding-left: 25px;
   font-size: 16px;
   line-height: 32px;
   color: var(--white-color);
+  cursor: pointer;
+}
+
+.category-checkbox {
+  display: none;
+}
+
+.category-checkbox + .category-name {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  border: 1px solid var(--white-color);
+}
+
+.category-checkbox + .category-name::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.category-checkbox:checked + .category-name::before {
+  content: '';
+  opacity: 1;
+}
+
+.category-checkbox:checked + .category-name {
+  border: 1px solid var(--purple-color);
+  background: url("../img/checkbox-dot.png") no-repeat 50% 50%;
+}
+
+.category-checkbox:checked + .category-name + .visible-category {
+  color: var(--purple-color);
 }
 
 .price-inputs-form {
@@ -698,7 +822,6 @@ section:not(:last-child) {
 
 .order-btn {
   margin-top: 20px;
-  /*padding: 8px 14px;*/
   width: 120px;
   height: 40px;
   font-weight: 700;
@@ -713,12 +836,62 @@ section:not(:last-child) {
 
 /* Projects */
 .projects-description {
-  width: 1000px;
+  width: 1080px;
   height: 246px;
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 32px;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  transform: translateY(2px);
+}
+
+.marker {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  bottom: 14px;
+  left: -124px;
+  width: 264px;
+  height: 59px;
+  padding-top: 8px;
+  padding-left: 11px;
+  padding-right: 11px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16.34px;
+  color: var(--white-color);
+  background-image: url("../img/first-tooltip.png");
+  opacity: 0;
+  transition: opacity;
+}
+
+.second-popup {
+  width: 264px;
+  height: 74px;
+  background-image: url("../img/second-popup.png");
+}
+
+.third-popup {
+  left: -108px;
+  width: 232px;
+  height: 42px;
+  background-image: url("../img/third-popup.png");
+}
+
+.marker:hover + .popup {
+  opacity: 1;
 }
 
 .blanchard-link {

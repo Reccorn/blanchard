@@ -11,6 +11,10 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -157,26 +161,32 @@
           </h2>
           <ul class="catalog-languages-list">
             <li class="language-item">
-              <button class="language-btn french-btn"></button>
+              <button class="language-btn french-btn" data-path="fre"></button>
             </li>
             <li class="language-item">
-              <button class="language-btn german-btn"></button>
+              <button class="language-btn german-btn" data-path="ger"></button>
             </li>
             <li class="language-item">
-              <button class="language-btn italian-btn"></button>
+              <button class="language-btn italian-btn language-btn-active" data-path="ita"></button>
             </li>
             <li class="language-item">
-              <button class="language-btn russian-btn"></button>
+              <button class="language-btn russian-btn" data-path="rus"></button>
             </li>
             <li class="language-item">
-              <button class="language-btn belgian-btn"></button>
+              <button class="language-btn belgian-btn" data-path="bel"></button>
             </li>
           </ul>
         </div>
         <p class="catalog-description">
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
         </p>
-        <div class="catalog-content-blocks">
+        <div class="catalog-content-blocks" data-target="fre">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos distinctio doloremque iste iure, odit officiis quaerat quam tempore. Dolorum exercitationem facere fugiat id, ipsum iste laborum magni natus officia unde.
+        </div>
+        <div class="catalog-content-blocks" data-target="ger">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid at deserunt dolorem doloribus ducimus eaque facilis in iste labore maxime natus nobis, quis, saepe sed sint soluta vero voluptatum!
+        </div>
+        <div class="catalog-content-blocks catalog-content-active" data-target="ita">
           <div class="catalog-left-block">
             <img src="img/girlandayo.jpg" alt="Доменико Гирландайо" class="catalog-image">
             <h3 class="author-heading">
@@ -188,8 +198,96 @@
             </p>
           </div>
           <div class="catalog-right-block">
-            <h2>ACCORDION</h2>
+            <ul class="catalog-ages" id="accordion">
+              <li class="ages-item">
+                <div class="age-number">
+                  C 1400 по 1499 гг.
+                </div>
+                <div class="age-content">
+                  <ul class="authors-list">
+                    <li class="author-name"><a class="author-link" href="#">Бенедетто ди Биндо</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Бергоньоне, Амброджо</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Биссоло, Франческо</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Больтраффио, Джованни</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Бонсиньори, Франческо</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Боттичини, Рафаэлло</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Брамантино</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Бреа, Людовико</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Бьяджо д’Антонио Туччи</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Веккьетта</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Андреа Верроккьо</a></li>
+                    <li class="author-name"><a class="author-link author-chosen" href="#">Доменико Гирландайо</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Беноццо Гоццоли</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Граначчи, Франческо</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Грегорио ди Чекко</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Джованни да Удине</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Джованни ди Паоло</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Джорджоне</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Парентино, Бернардо</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Пезеллино</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Пьетро Перуджино</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Перуцци, Бальдассаре</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Пизанелло</a></li>
+                    <li class="author-name"><a class="author-link" href="#">Пинтуриккьо</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="ages-item">
+                <div class="age-number">
+                  С 1500 по 1599 гг.
+                </div>
+                <div class="age-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ducimus ea error exercitationem, facilis ipsam libero maiores molestiae mollitia neque nesciunt placeat quam quidem rerum sapiente sint ullam vitae voluptatibus.
+                </div>
+              </li>
+              <li class="ages-item">
+                <div class="age-number">
+                  С 1600 по 1699 гг.
+                </div>
+                <div class="age-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam cumque cupiditate debitis deleniti error, et fugit impedit, numquam pariatur vel veritatis. Ex incidunt iste labore minus quam quas suscipit.
+                </div>
+              </li>
+              <li class="ages-item">
+                <div class="age-number">
+                  С 1700 по 1799 гг.
+                </div>
+                <div class="age-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consectetur consequatur culpa debitis dolorem eius eos illum impedit ipsa itaque laborum magnam maxime nihil odio quisquam tempora temporibus, ullam?
+                </div>
+              </li>
+              <li class="ages-item">
+                <div class="age-number">
+                  С 1800 по 1899 гг.
+                </div>
+                <div class="age-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla sed sequi veritatis. Aspernatur ducimus eaque eos laudantium numquam tempore. Aliquam consequatur consequuntur delectus ipsum nisi nobis omnis, optio porro.
+                </div>
+              </li>
+              <li class="ages-item">
+                <div class="age-number">
+                  С 1900 по 1999 гг.
+                </div>
+                <div class="age-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam, atque cum delectus deserunt dolor hic illo inventore itaque iure nam natus nesciunt nostrum quasi sit soluta tempora tempore ut.
+                </div>
+              </li>
+              <li class="ages-item">
+                <div class="age-number">
+                  С 2000 г.
+                </div>
+                <div class="age-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae eius facilis illum impedit inventore ipsum natus quia? Alias dolore doloremque ducimus eius natus provident qui repudiandae sequi tenetur velit!
+                </div>
+              </li>
+            </ul>
           </div>
+        </div>
+        <div class="catalog-content-blocks" data-target="rus">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolorem eaque eos in laboriosam quaerat tempore voluptates. Aperiam architecto cupiditate dolore, fuga fugit impedit ipsa perspiciatis quibusdam ut vero voluptates?
+        </div>
+        <div class="catalog-content-blocks" data-target="bel">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam architecto deleniti labore necessitatibus porro, possimus quam saepe sapiente veniam. Adipisci cupiditate earum fugiat harum nihil obcaecati quos ratione voluptas.
         </div>
       </div>
     </section>
@@ -264,53 +362,53 @@
           </h2>
           <form class="publications-form">
             <span class="publication-form-heading">Категории</span>
-            <label class="category-name">
-              Бестселлеры
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Бестселлеры</span>
             </label>
-            <label class="category-name">
-              Искусство
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Искусство</span>
             </label>
-            <label class="category-name">
-              Архитектура
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Архитектура</span>
             </label>
-            <label class="category-name">
-              Дизайн
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Дизайн</span>
             </label>
-            <label class="category-name">
-              Мода
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Мода</span>
             </label>
-            <label class="category-name">
-              Детям
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Детям</span>
             </label>
-            <label class="category-name">
-              Художественная литература
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Художественная литература</span>
             </label>
-            <label class="category-name">
-              Публицистика
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Публицистика</span>
             </label>
-            <label class="category-name">
-              Путеводители
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Путеводители</span>
             </label>
-            <label class="category-name">
-              Философия
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Философия</span>
             </label>
-            <label class="category-name">
-              Учебная литература
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Учебная литература</span>
             </label>
-            <label class="category-name">
-              Журналы и газеты
+            <label class="category-label">
               <input type="checkbox" class="category-checkbox">
+              <span class="category-name"></span><span class="visible-category">Журналы и газеты</span>
             </label>
           </form>
           <form class="price-inputs-form">
@@ -444,7 +542,7 @@
           Проекты
         </h2>
         <p class="projects-description">
-          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское      обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены исключительно в разрезе маркетинговых и финансовых      предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="#" class="blanchard-link">blanchard-art.ru/projects/about</a>
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="tooltip"><img src="img/tooltip.png" class="marker" alt="Тултип"><span class="popup">Пример современных тенденций - современная методология разработки </span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="tooltip"><img src="img/tooltip.png" class="marker" alt="Тултип"><span class="popup second-popup">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span> исключительно в разрезе маркетинговых и финансовых <span class="tooltip"><img src="img/tooltip.png" class="marker" alt="Тултип"><span class="popup third-popup">В стремлении повысить качество</span></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="#" class="blanchard-link">blanchard-art.ru/projects/about</a>
         </p>
         <h3 class="third-heading">
           Партнеры проектов:
@@ -497,10 +595,10 @@
             <p class="contact-us-heading">Заказать обратный звонок</p>
             <form action="https://jsonplaceholder.typicode.com/posts" class="contact-us-form">
               <label>
-                <input type="text" class="contact-input" placeholder="Имя*" required>
+                <input type="text" name="Name" id="Name" class="contact-input" placeholder="Имя*" data-validate-field="name">
               </label>
               <label>
-                <input type="tel" class="contact-input" placeholder="Телефон*" required>
+                <input type="tel" name="Phone" id="Phone" class="contact-input" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
               </label>
               <button type="submit" class="contact-btn">Заказать</button>
             </form>
@@ -575,5 +673,8 @@
   <script defer src="js/choices.min.js"></script>
   <script defer src="js/select.js"></script>
   <script defer src="js/map.js"></script>
+  <script defer src="js/tabs.js"></script>
+  <script defer src="js/accordion.js"></script>
+  <script defer src="js/validate-form.js"></script>
 </body>
 </html>
