@@ -278,7 +278,7 @@ section:not(:last-child) {
 
 /* About Us */
 .about-us-description {
-  width: 1020px;
+  width: 1080px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -458,7 +458,7 @@ section:not(:last-child) {
 }
 
 .catalog-description {
-  width: 1030px;
+  width: 1080px;
   margin-bottom: 50px;
   font-size: 16px;
   line-height: 32px;
@@ -496,7 +496,7 @@ section:not(:last-child) {
 }
 
 .author-description {
-  width: 700px;
+  width: 749px;
   margin-top: 15px;
   margin-bottom: 0;
   font-size: 16px;
@@ -632,7 +632,7 @@ section:not(:last-child) {
 }
 
 .event-description {
-  width: 385px;
+  width: 400px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -842,6 +842,7 @@ section:not(:last-child) {
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 32px;
+  word-wrap: unset;
 }
 
 .tooltip {
