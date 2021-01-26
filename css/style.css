@@ -1,17 +1,23 @@
 @font-face {
   font-family: "Open Sans";
+  src: url("../fonts/open-sans-v18-latin_cyrillic-regular.woff") format("woff"),
+  url("../fonts/open-sans-v18-latin_cyrillic-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
+  src: url("../fonts/open-sans-v18-latin_cyrillic-600.woff") format("woff"),
+  url("../fonts/open-sans-v18-latin_cyrillic-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
+  src: url("../fonts/open-sans-v18-latin_cyrillic-700.woff") format("woff"),
+  url("../fonts/open-sans-v18-latin_cyrillic-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -53,6 +59,12 @@ ul {
   margin-right: auto;
 }
 
+main {
+  position: absolute;
+  top: 103px;
+  left: 0;
+}
+
 section {
   align-items: center;
 }
@@ -92,7 +104,7 @@ section:not(:last-child) {
 }
 
 .swiper-button-prev {
-  top: 120px;
+  top: 50px;
   left: 0;
   width: 30px;
   height: 30px;
@@ -102,7 +114,7 @@ section:not(:last-child) {
 }
 
 .swiper-button-next {
-  top: 120px;
+  top: 50px;
   left: 100px;
   width: 30px;
   height: 30px;
@@ -128,38 +140,41 @@ section:not(:last-child) {
 }
 
 .swiper-pagination {
-  top: 98px;
+  top: 28px;
   left: 41px;
   width: 47px;
-  height: 23px;
   font-size: 16px;
   line-height: 32px;
   color: var(--white-color);
 }
 
 .swiper-wrapper {
-  top: 175px;
+  top: 100px;
 }
 
 /* Header */
 .header-top-content {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #000000;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  /*height: 100px;*/
+  padding-top: 30px;
+  padding-bottom: 30px;
   align-items: center;
+}
+
+.logo {
+  margin-right: 179px;
 }
 
 .nav-list {
   display: flex;
   justify-content: space-between;
-  /*width: 896px;*/
+  margin-right: 279px;
 }
 
 .nav-item {
@@ -186,7 +201,6 @@ section:not(:last-child) {
 }
 
 .enter-link {
-  margin-left: 279px;
   font-size: 18px;
   line-height: 24.51px;
   border: 0;
@@ -198,23 +212,21 @@ section:not(:last-child) {
   color: var(--light-purple);
 }
 
-.enter-link:hover svg {
-  stroke: var(--light-purple);
+.enter-link:hover svg path {
+  fill: var(--light-purple);
 }
 
 .enter-link:active {
   color: var(--purple-color);
 }
 
-.enter-link:active svg {
-  stroke: var(--purple-color);
+.enter-link:active svg path {
+  fill: var(--purple-color);
 }
 
 .header-bottom-content {
-  position: absolute;
+  position: relative;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -222,7 +234,8 @@ section:not(:last-child) {
 .header-bottom {
   display: flex;
   justify-content: space-between;
-  height: 70px;
+  padding-top: 23px;
+  padding-bottom: 28px;
   align-items: center;
 }
 
@@ -246,9 +259,13 @@ section:not(:last-child) {
   background: url("../img/menu-icon.png") no-repeat 100%;
 }
 
-.search-icon {
+.search-btn {
   width: 22.1px;
   height: 21.62px;
+  margin-right: 9px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
   transform: translateY(7px);
 }
 
@@ -257,8 +274,11 @@ section:not(:last-child) {
   padding-left: 0;
   padding-bottom: 3px;
   border: 0;
+  color: var(--light-purple);
+  caret-color: var(--light-purple);
   border-bottom: 1px solid var(--white-color);
   background-color: transparent;
+  outline: none;
   cursor: pointer;
 }
 
@@ -268,26 +288,29 @@ section:not(:last-child) {
   color: var(--white-color);
 }
 
-.search-input:hover {
-  border-bottom-color: var(--light-purple);
+.search-input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
-.search-input:hover .search-icon {
-  stroke: var(--light-purple);
+.form-search:hover .search-input {
+  border-bottom: 1px solid var(--light-purple);
+}
+
+.form-search:hover .search-btn svg rect {
+  fill: var(--light-purple);
+}
+
+.form-search:hover .search-btn svg path {
+  fill: var(--light-purple);
 }
 
 /* Hero */
 .section-hero {
   width: 100%;
-  height: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 133px;
+  padding-bottom: 122px;
   background: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg") no-repeat 40% 100%;
   background-size: cover;
-}
-
-.hero {
-  padding-top: 133px;
 }
 
 .main-heading {
@@ -302,6 +325,7 @@ section:not(:last-child) {
 
 .hero-description {
   width: 579px;
+  margin-top: 0;
   margin-bottom: 92px;
   font-weight: 700;
   font-size: 18px;
@@ -310,9 +334,9 @@ section:not(:last-child) {
 }
 
 .subscribe-btn {
-  width: 314px;
-  height: 70px;
-  padding: 17px 35px;
+  /*width: 314px;*/
+  /*height: 70px;*/
+  padding: 22.5px 35px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24.51px;
@@ -321,6 +345,7 @@ section:not(:last-child) {
   border: 0;
   border-radius: 100px;
   cursor: pointer;
+  transition: .1s ease-out;
 }
 
 .subscribe-btn:hover {
@@ -344,11 +369,9 @@ section:not(:last-child) {
 /* Gallery */
 .section-gallery {
   width: 100%;
-  height: 995px;
-  margin-left: auto;
-  margin-right: auto;
   background: url("../img/birmingham-museums-gallery.jpg") no-repeat;
   background-size: cover;
+  padding-top: 80px;
 }
 
 .gallery-content-blocks {
@@ -357,11 +380,15 @@ section:not(:last-child) {
 }
 
 .gallery-left-block {
+  display: flex;
+  flex-direction: column;
   width: 401px;
-  padding-top: 80px;
+  /*padding-top: 80px;*/
+  padding-bottom: 80px;
 }
 
 .filter-description {
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 16px;
   line-height: 32px;
@@ -369,14 +396,14 @@ section:not(:last-child) {
 }
 
 .choices {
-  margin-top: 10px;
+  margin-bottom: 520px;
+  color: var(--white-color);
   border: 1px solid var(--white-color);
   border-radius: 6px;
 }
 
 .choices__inner {
   width: 400px;
-  height: 40px;
   padding-top: 3px;
   font-size: 16px;
   background-color: transparent;
@@ -429,7 +456,6 @@ section:not(:last-child) {
 
 .gallery-authorisation-description {
   width: 370px;
-  margin-top: 545px;
   margin-bottom: 0;
   font-weight: 600;
   font-size: 16px;
@@ -445,7 +471,8 @@ section:not(:last-child) {
 .gallery-right-block {
   position: relative;
   width: 1150px;
-  height: 1000px;
+  padding-bottom: 80px;
+  /*height: 1000px;*/
 }
 
 .images-list {
@@ -458,19 +485,21 @@ section:not(:last-child) {
 
 .image-item {
   width: calc((100% - 100px) / 3);
-  height: 350px;
   margin-bottom: 50px;
 }
 
 /* Catalog */
-.catalog-heading {
+.catalog-top-content {
   display: flex;
+}
+
+.catalog-heading {
+  margin-right: 41px;
 }
 
 .catalog-languages-list {
   display: flex;
   justify-content: space-between;
-  margin-left: 41px;
   margin-bottom: 30px;
   align-items: center;
 }
@@ -542,6 +571,7 @@ section:not(:last-child) {
 
 .catalog-left-block {
   width: 750px;
+  margin-right: 50px;
 }
 
 .catalog-image {
@@ -557,6 +587,7 @@ section:not(:last-child) {
 }
 
 .years-of-life {
+  margin-bottom: 15px;
   font-size: 12px;
   line-height: 16px;
   color: #999999;
@@ -564,7 +595,6 @@ section:not(:last-child) {
 
 .author-description {
   width: 749px;
-  margin-top: 15px;
   margin-bottom: 0;
   font-size: 16px;
   line-height: 21.79px;
@@ -572,7 +602,6 @@ section:not(:last-child) {
 
 .catalog-right-block {
   width: 100%;
-  margin-left: 50px;
 }
 
 .ages-item {
@@ -658,6 +687,7 @@ section:not(:last-child) {
 .events-list {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .event-item {
@@ -736,8 +766,7 @@ section:not(:last-child) {
 
 .all-events {
   display: block;
-  height: 60px;
-  margin-top: 50px;
+  /*height: 60px;*/
   margin-left: auto;
   margin-right: auto;
   padding: 17px 35px;
@@ -766,8 +795,6 @@ section:not(:last-child) {
 .section-publications {
   width: 100%;
   height: 766px;
-  margin-left: auto;
-  margin-right: auto;
   background: url("../img/birmingham-museums-publications.jpg") no-repeat;
   background-size: cover;
 }
@@ -776,13 +803,13 @@ section:not(:last-child) {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
 .publications-left-block {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
 }
 
 .publication-form-heading {
@@ -796,6 +823,7 @@ section:not(:last-child) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .category-label {
@@ -843,13 +871,14 @@ section:not(:last-child) {
   color: var(--purple-color);
 }
 
-.price-inputs-form {
-  margin-top: 25px;
+.price-heading {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .inputs-block {
   height: 40px;
-  margin-top: 10px;
+  padding-left: 10px;
   padding-right: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
@@ -857,7 +886,7 @@ section:not(:last-child) {
 }
 
 .price-label {
-  margin-left: 10px;
+  margin-right: 10px;
   font-size: 16px;
   line-height: 32px;
   color: var(--white-color);
@@ -866,7 +895,7 @@ section:not(:last-child) {
 .price-input {
   height: 100%;
   width: 73px;
-  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 10px;
   border: 0;
   background-color: var(--purple-color);
@@ -891,10 +920,14 @@ section:not(:last-child) {
   width: calc((100% - 100px) / 3);
 }
 
+.publication-image {
+  margin-bottom: 23px;
+}
+
 .publication-description {
   display: flex;
   justify-content: space-between;
-  margin-top: 23px;
+  margin-bottom: 20px;
 }
 
 .publication-info {
@@ -917,7 +950,6 @@ section:not(:last-child) {
 }
 
 .order-btn {
-  margin-top: 20px;
   width: 120px;
   height: 40px;
   font-weight: 700;
@@ -996,9 +1028,12 @@ section:not(:last-child) {
   color: var(--purple-color);
 }
 
+.partner-heading {
+  margin-bottom: 23px;
+}
+
 .project-swiper {
   width: 100%;
-  margin-top: 23px;
 }
 
 .project-prev-btn {
@@ -1126,17 +1161,17 @@ section:not(:last-child) {
   height: 682px;
   padding-top: 124px;
   padding-bottom: 124px;
+  padding-left: 160px;
   border: 1px solid #CACACA;
   align-items: center;
 }
 
 .contact-left-centered {
   max-width: 402px;
-  margin-left: 160px;
 }
 
 .address-string {
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 36px;
   font-size: 16px;
   line-height: 32px;
@@ -1167,7 +1202,6 @@ section:not(:last-child) {
 
 .contact-btn {
   width: 157px;
-  height: 59px;
   padding: 17px 35px;
   font-weight: 700;
   font-size: 18px;
@@ -1179,9 +1213,12 @@ section:not(:last-child) {
   cursor: pointer;
 }
 
+.socials-heading {
+  margin-bottom: 18.63px;
+}
+
 .contact-list {
   display: flex;
-  margin-top: 18.63px;
 }
 
 .contact-item {
@@ -1209,8 +1246,8 @@ section:not(:last-child) {
 /* Footer */
 .footer {
   width: 100%;
-  height: 140px;
   padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #000000;
 }
 
