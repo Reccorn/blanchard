@@ -22,6 +22,14 @@
   font-style: normal;
 }
 
+@keyframes hero {
+  from {background-size: 100%;}
+  /*25% {background-size: 125%;}*/
+  /*50% {background-size: 150%;}*/
+  /*75% {background-size: 175%;}*/
+  to {background-size: 200%;}
+}
+
 * {
   box-sizing: border-box;
 }
@@ -53,17 +61,25 @@ ul {
   padding: 0;
 }
 
+header {
+  position: relative;
+}
+
 .container {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-main {
-  position: absolute;
-  top: 103px;
-  left: 0;
-}
+/*main {*/
+/*  position: absolute;*/
+/*  !*top: 103px;*!*/
+/*  left: 0;*/
+/*}*/
+
+/*footer {*/
+/*  position: absolute;*/
+/*}*/
 
 section {
   align-items: center;
@@ -225,7 +241,8 @@ section:not(:last-child) {
 }
 
 .header-bottom-content {
-  position: relative;
+  position: absolute;
+  top: 100px;
   width: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
@@ -245,6 +262,7 @@ section:not(:last-child) {
 }
 
 .bottom-menu-item {
+  position: relative;
   font-size: 18px;
   line-height: 24.51px;
 }
@@ -257,6 +275,110 @@ section:not(:last-child) {
   padding-right: 15.07px;
   color: var(--white-color);
   background: url("../img/menu-icon.png") no-repeat 100%;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  z-index: 2;
+  width: 300px;
+  height: 0;
+  padding: 40px;
+  /*background-color: rgba(0, 0, 0, 0.4);*/
+  background-color: #000000;
+  opacity: 0;
+  transition: .4s ease-out;
+}
+
+.dropdown-active {
+  height: 300px;
+  opacity: 1;
+}
+
+.dropdown-item {
+  position: relative;
+  width: 220px;
+  padding-top: 10px;
+  padding-left: 14px;
+  padding-bottom: 12px;
+}
+
+.dropdown-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.dropdown-link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19.07px;
+  color: var(--white-color);
+}
+
+.dropdown-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
+.simplebar-scrollbar::before {
+  width: 2px;
+  height: 28px;
+  margin-top: 40px;
+  background-color: var(--purple-color);
+  opacity: 1;
+}
+
+.curbe-image {
+  background: url("../img/curbe-painting.webp") 50% 50%;
+  background-size: cover;
+}
+
+.mane-image {
+  background: url("../img/mane-painting.webp") 50% 50%;
+  background-size: cover;
+}
+
+.mille-image {
+  background: url("../img/mille-painting.webp") 50% 50%;
+  background-size: cover;
+}
+
+.boner-image {
+  background: url("../img/boner-image.webp") 50% 50%;
+  background-size: cover;
+}
+
+.breton-image {
+  background: url("../img/breton-painting.webp") 50% 50%;
+  background-size: cover;
+}
+
+.repin-image {
+  background: url("../img/repin-painting.webp") 50% 50%;
+  background-size: cover;
+}
+
+.eakins-image {
+  background: url("../img/eakins-painting.webp") 50% 50%;
+  background-size: cover;
+}
+
+.dom\`e-image {
+  background: url("../img/dom`e-painting.webp") 50% 50%;
+  background-size: cover;
+}
+
+.lega-image {
+  background: url("../img/lega-painting.webp") 50% 50%;
+  background-size: cover;
 }
 
 .search-btn {
@@ -311,6 +433,8 @@ section:not(:last-child) {
   padding-bottom: 122px;
   background: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg") no-repeat 40% 100%;
   background-size: cover;
+  animation: hero 20s infinite ease-in-out;
+  animation-direction: alternate;
 }
 
 .main-heading {
@@ -1245,6 +1369,8 @@ section:not(:last-child) {
 
 /* Footer */
 .footer {
+  /*position: absolute;*/
+  /*top: 6746px;*/
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
