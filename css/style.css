@@ -24,9 +24,6 @@
 
 @keyframes hero {
   from {background-size: 100%;}
-  /*25% {background-size: 125%;}*/
-  /*50% {background-size: 150%;}*/
-  /*75% {background-size: 175%;}*/
   to {background-size: 200%;}
 }
 
@@ -66,20 +63,10 @@ header {
 }
 
 .container {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1630px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
-
-/*main {*/
-/*  position: absolute;*/
-/*  !*top: 103px;*!*/
-/*  left: 0;*/
-/*}*/
-
-/*footer {*/
-/*  position: absolute;*/
-/*}*/
 
 section {
   align-items: center;
@@ -159,6 +146,7 @@ section:not(:last-child) {
   top: 28px;
   left: 41px;
   width: 47px;
+  height: 50px;
   font-size: 16px;
   line-height: 32px;
   color: var(--white-color);
@@ -275,6 +263,17 @@ section:not(:last-child) {
   padding-right: 15.07px;
   color: var(--white-color);
   background: url("../img/menu-icon.png") no-repeat 100%;
+  transition: .1s ease-in;
+}
+
+.bottom-menu-link:hover:not(.bottom-menu-link-active) {
+  color: var(--purple-color);
+  background: url("../img/purple-menu-icon.png") no-repeat 100%;
+}
+
+.bottom-menu-link-active {
+  color: var(--dark-purple);
+  background: url("../img/menu-icon-active.png") no-repeat 100% 75%;
 }
 
 .dropdown {
@@ -284,9 +283,8 @@ section:not(:last-child) {
   z-index: 2;
   width: 300px;
   height: 0;
-  padding: 40px;
-  /*background-color: rgba(0, 0, 0, 0.4);*/
-  background-color: #000000;
+  /*padding: 40px;*/
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: .4s ease-out;
 }
@@ -296,12 +294,19 @@ section:not(:last-child) {
   opacity: 1;
 }
 
+.dropdown-menu {
+  height: 100%;
+  /*overflow: hidden;*/
+}
+
 .dropdown-item {
   position: relative;
   width: 220px;
+  margin-right: 19px;
   padding-top: 10px;
   padding-left: 14px;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
+  line-height: 19.07px;
 }
 
 .dropdown-item:not(:last-child) {
@@ -311,7 +316,6 @@ section:not(:last-child) {
 .dropdown-link {
   font-weight: 600;
   font-size: 14px;
-  line-height: 19.07px;
   color: var(--white-color);
 }
 
@@ -325,13 +329,34 @@ section:not(:last-child) {
 }
 
 .simplebar-content-wrapper {
+  padding: 40px;
   overflow: auto;
+}
+
+.simplebar-content {
+  height: 220px;
+}
+
+.simplebar-track.simplebar-vartical {
+  width: 2px;
+}
+
+.simplebar-track {
+  /*width: 2px;*/
+  height: 220px;
+  margin-top: 40px;
+  margin-right: 19px;
+  background-color: #000000;
+}
+
+.simplebar-track::before {
+  width: 2px;
+  height: 220px;
 }
 
 .simplebar-scrollbar::before {
   width: 2px;
   height: 28px;
-  margin-top: 40px;
   background-color: var(--purple-color);
   opacity: 1;
 }
@@ -429,11 +454,12 @@ section:not(:last-child) {
 /* Hero */
 .section-hero {
   width: 100%;
+  max-height: 630px;
   padding-top: 133px;
   padding-bottom: 122px;
   background: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg") no-repeat 40% 100%;
   background-size: cover;
-  animation: hero 20s infinite ease-in-out;
+  animation: hero 60s infinite ease-in-out;
   animation-direction: alternate;
 }
 
@@ -458,8 +484,6 @@ section:not(:last-child) {
 }
 
 .subscribe-btn {
-  /*width: 314px;*/
-  /*height: 70px;*/
   padding: 22.5px 35px;
   font-weight: 700;
   font-size: 18px;
@@ -469,10 +493,10 @@ section:not(:last-child) {
   border: 0;
   border-radius: 100px;
   cursor: pointer;
-  transition: .1s ease-out;
 }
 
 .subscribe-btn:hover {
+  padding: 19.5px 32px;
   border: 3px solid #D1A9F0;
 }
 
@@ -870,6 +894,29 @@ section:not(:last-child) {
   word-break: break-word;
 }
 
+.hidden-events {
+  display: none;
+}
+
+.hidden-event-list {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.hidden-event-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.biennale-image {
+  background: url("../img/biennale-image.jpg") no-repeat;
+  background-size: cover;
+}
+
+.vinzor-image {
+  background: url("../img/vinzor-image.jpg") no-repeat;
+  background-size: cover;
+}
+
 .more-about-event {
   position: absolute;
   top: 327px;
@@ -890,7 +937,6 @@ section:not(:last-child) {
 
 .all-events {
   display: block;
-  /*height: 60px;*/
   margin-left: auto;
   margin-right: auto;
   padding: 17px 35px;
@@ -902,9 +948,15 @@ section:not(:last-child) {
   border: 2px solid var(--purple-color);
   border-radius: 100px;
   cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.all-events-hidden {
+  display: none;
 }
 
 .all-events:hover {
+  padding: 16px 34px;
   color: var(--white-color);
   border: 3px solid #D1A9F0;
   background-color: var(--purple-color);
@@ -1084,6 +1136,11 @@ section:not(:last-child) {
   border: 2px solid var(--purple-color);
   border-radius: 100px;
   cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.order-btn:hover {
+  background-color: var(--purple-color);
 }
 
 /* Projects */
@@ -1335,6 +1392,12 @@ section:not(:last-child) {
   border: 2px solid var(--purple-color);
   border-radius: 100px;
   cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.contact-btn:hover {
+  color: var(--white-color);
+  background-color: var(--purple-color);
 }
 
 .socials-heading {
