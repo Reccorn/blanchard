@@ -1,26 +1,26 @@
 $( function() {
-    $( ".italian-authors").accordion({
+    $( ".catalog__ages__italian-authors").accordion({
         collapsible: true,
         active: true,
         heightStyle: 'content',
-        header: '> .ages-item > .age-number'
+        header: '> .ages__item > .ages__item__number'
     });
 } );
 
 $( function() {
-    $( ".french-authors").accordion({
+    $( ".catalog__ages__french-authors").accordion({
         collapsible: true,
         active: true,
         heightStyle: 'content',
-        header: '> .ages-item > .age-number'
+        header: '> .ages__item > .ages__item__number'
     });
 } );
 
 $( function() {
-    $( ".german-authors").accordion({
+    $( ".catalog__ages__german-authors").accordion({
         collapsible: true,
         active: true,
         heightStyle: 'content',
-        header: '> .ages-item > .age-number'
+        header: '> .ages__item > .ages__item__number'
     });
 } );

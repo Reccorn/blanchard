@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.language-btn').forEach(function (tabsBtn) {
+  document.querySelectorAll('.languages-list__btn').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 
-      document.querySelectorAll('.language-btn').forEach(function (unactive) {
-        unactive.classList.remove('language-btn-active');
+      document.querySelectorAll('.languages-list__btn').forEach(function (unactive) {
+        unactive.classList.remove('languages-list__btn__active');
       });
 
-      document.querySelectorAll('.catalog-content-blocks').forEach(function (tabContent) {
-        tabContent.classList.remove('catalog-content-active');
+      document.querySelectorAll('.catalog__content-blocks').forEach(function (tabContent) {
+        tabContent.classList.remove('catalog__content__active');
       });
-      document.querySelectorAll('.catalog-left-block').forEach(function (leftContent) {
-        leftContent.classList.remove('catalog-left-block-active');
+      document.querySelectorAll('.catalog__left-block').forEach(function (leftContent) {
+        leftContent.classList.remove('catalog__left-block__active');
       });
 
-      document.querySelector(`[data-path="${path}"]`).classList.add('language-btn-active');
-      document.querySelector(`[data-target="${path}"]`).classList.add('catalog-content-active');
+      document.querySelector(`[data-path="${path}"]`).classList.add('languages-list__btn__active');
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content__active');
     });
   });
 });

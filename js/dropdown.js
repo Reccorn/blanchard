@@ -1,35 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.bottom-menu-link').forEach(function (drops) {
+  document.querySelectorAll('.menu-list__btn').forEach(function (drops) {
     drops.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 
-      document.querySelectorAll('.bottom-menu-link').forEach(function (unactive) {
-        unactive.classList.remove('bottom-menu-link-active');
+      document.querySelectorAll('.menu-list__btn').forEach(function (unactive) {
+        unactive.classList.remove('menu-list__btn__active');
       });
 
       document.querySelectorAll('.dropdown').forEach(function (hide) {
-        hide.classList.remove('dropdown-active');
+        hide.classList.remove('dropdown__active');
       });
 
-      const activeLink = document.querySelector(`[data-path="${path}"]`);
+      const activeBtn = document.querySelector(`[data-path="${path}"]`);
       // document.querySelector(`[data-path="${path}"]`).classList.add('bottom-menu-link-active');
-      activeLink.classList.add('bottom-menu-link-active');
-      document.querySelector(`[data-target="${path}"]`).classList.add('dropdown-active');
+      activeBtn.classList.add('menu-list__btn__active');
+      document.querySelector(`[data-target="${path}"]`).classList.add('dropdown__active');
 
-      document.querySelectorAll('.dropdown-link').forEach(function (close) {
+      document.querySelectorAll('.dropdown__link').forEach(function (close) {
         close.addEventListener('click', function () {
           document.querySelectorAll('.dropdown').forEach(function (hide) {
-            hide.classList.remove('dropdown-active');
-            activeLink.classList.remove('bottom-menu-link-active');
+            hide.classList.remove('dropdown__active');
+            activeBtn.classList.remove('menu-list__btn__active');
           });
         });
       });
 
       document.addEventListener('click', function (e) {
-        if (!e.target.classList.contains('bottom-menu-link')) {
+        if (!e.target.classList.contains('menu-list__btn')) {
           document.querySelectorAll('.dropdown').forEach(function (hide) {
-            hide.classList.remove('dropdown-active');
-            activeLink.classList.remove('bottom-menu-link-active');
+            hide.classList.remove('dropdown__active');
+            activeBtn.classList.remove('menu-list__btn__active');
           });
         }
       });
