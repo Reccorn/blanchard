@@ -24,3 +24,12 @@ $( function() {
         header: '> .ages__item > .ages__item__number'
     });
 } );
+
+$( function() {
+    $( ".publications__mobile-spoiler").accordion({
+        collapsible: true,
+        active: false,
+        heightStyle: 'content',
+        header: '> .mobile-spoiler__heading'
+    });
+} );

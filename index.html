@@ -25,7 +25,7 @@
   <header>
     <div class="header-top">
       <div class="header-top__content container">
-        <button class="header-top__menu-btn"></button>
+        <button class="header-top__menu-btn" id="burger"></button>
         <div class="header-top__logo">
           <a href="#" class="logo__link">
             <img class="logo" src="img/blanchard-logo.png" alt="Blanchard - художественная галерея">
@@ -165,7 +165,25 @@
   </header>
 
   <main>
+    <div class="menu-block" id="burger-menu">
+      <ul class="menu-list">
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#">О нас</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Галерея</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Каталог</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#">События</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Издания</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Проекты</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Контакты</a></li>
+      </ul>
+      <a href="#" class="header-top__enter-link">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+        </svg>
+        Войти
+      </a>
+    </div>
     <section class="section-hero">
+      <h1 class="hero__main-heading">Blanchard - художественная галерея</h1>
       <div class="container">
         <p class="hero__heading">
           Прикоснитесь к прекрасному
@@ -190,7 +208,7 @@
       <div class="gallery__content container">
         <div class="gallery__left-block">
           <h2 class="section-heading heading__color__white gallery__heading">Галерея</h2>
-          <span for="gallery-filter" class="gallery__select-heading">
+          <span class="gallery__select-heading">
             Фильтровать по:
           </span>
           <select name="filter" id="gallery-filter" class="gallery__select">
@@ -283,6 +301,108 @@
                 <ul class="gallery__images-list">
                   <li class="images-list__item third-slide__third-img"></li>
                   <li class="images-list__item"></li>
+                  <li class="images-list__item third-slide__sixth-img"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="gallery__authorisation-text__mobile">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__authorisation-link" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </p>
+        </div>
+        <div class="gallery__right-block mobile-wrapper">
+          <div class="swiper-container">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item first-slide__first-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item first-slide__second-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item first-slide__third-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item first-slide__fourth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item first-slide__fifth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item first-slide__sixth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item second-slide__first-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item second-slide__second-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item second-slide__third-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item second-slide__fourth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item second-slide__fifth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item second-slide__sixth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item third-slide__first-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item third-slide__second-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item third-slide__third-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item third-slide__fourth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
+                  <li class="images-list__item third-slide__fifth-img"></li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="gallery__images-list">
                   <li class="images-list__item third-slide__sixth-img"></li>
                 </ul>
               </div>
@@ -1115,6 +1235,49 @@
           </ul>
         </div>
         <button class="all-events-btn">Все события</button>
+        <div class="swiper-container events__mobile-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="events__item">
+                <div class="events__image-field events__image-field__gravure"></div>
+                <div class="events__data">
+                  <div class="events__under-image-text">
+                    Музей им. Щусева
+                    <br>
+                    с 20 марта по 30 апреля
+                  </div>
+                  <h3 class="events__heading events__heading__margin-bottom">
+                    Книжная гравюра в живом восприятии
+                  </h3>
+                  <p class="events__description__tablet">
+                    Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                  </p>
+                  <a href="#" class="events__more-btn">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events__item">
+                <div class="events__image-field events__image-field__mosaic"></div>
+                <div class="events__data">
+                  <div class="events__under-image-text">
+                    ММОМА
+                    <br>
+                    24 марта 19:00
+                  </div>
+                  <h3 class="events__heading">
+                    «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                  </h3>
+                  <p class="events__description__tablet">
+                    Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                  </p>
+                  <a href="#" class="events__more-btn">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination-custom"></div>
+        </div>
       </div>
     </section>
 
@@ -1175,6 +1338,173 @@
               <span class="publications-form__category"></span><span class="publications-form__category__visible">Журналы и газеты</span>
             </label>
           </form>
+          <div class="publications__mobile-spoiler">
+            <h3 class="mobile-spoiler__heading">Категории</h3>
+            <div class="mobile-spoiler__content">
+              <ul class="mobile-spoiler__categories-list">
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="best">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Бестселлеры</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="art">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Искусство</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="arc">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Архитектура</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="design">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Дизайн</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="fashion">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Мода</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="children">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Детям</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="artlit">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Художественная литература</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="pub">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Публицистика</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="guide">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Путеводители</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="phil">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Философия</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="learnlit">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Учебная литература</span>
+                  </label>
+                </li>
+                <li class="categories-list__item">
+                  <label class="publications-form__label">
+                    <input type="checkbox" class="publications-form__checkbox" data-path="mag">
+                    <span class="publications-form__category"></span><span class="publications-form__category__visible">Журналы и газеты</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="publications__chosen-category">
+            <ul class="mobile-spoiler__categories-list">
+              <li class="categories-list__item categories-list__item__hidden" data-target="best">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Бестселлеры</span>
+                </label>
+                <button class="categories-list__close-button" data-path="best"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="art">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Искусство</span>
+                </label>
+                <button class="categories-list__close-button" data-path="art"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="arc">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Архитектура</span>
+                </label>
+                <button class="categories-list__close-button" data-path="arc"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="design">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Дизайн</span>
+                </label>
+                <button class="categories-list__close-button" data-path="design"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="fashion">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Мода</span>
+                </label>
+                <button class="categories-list__close-button" data-path="fashion"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="children">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Детям</span>
+                </label>
+                <button class="categories-list__close-button" data-path="children"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="artlit">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Художественная литература</span>
+                </label>
+                <button class="categories-list__close-button" data-path="artlit"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="pub">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Публицистика</span>
+                </label>
+                <button class="categories-list__close-button" data-path="pub"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="guide">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Путеводители</span>
+                </label>
+                <button class="categories-list__close-button" data-path="guide"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="phil">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Философия</span>
+                </label>
+                <button class="categories-list__close-button" data-path="phil"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="learnlit">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Учебная литература</span>
+                </label>
+                <button class="categories-list__close-button" data-path="learnlit"></button>
+              </li>
+              <li class="categories-list__item categories-list__item__hidden" data-target="mag">
+                <label class="publications-form__label">
+                  <input type="checkbox" class="publications-form__checkbox" checked>
+                  <span class="publications-form__category"></span><span class="publications-form__category__visible">Журналы и газеты</span>
+                </label>
+                <button class="categories-list__close-button" data-path="mag"></button>
+              </li>
+            </ul>
+          </div>
           <form class="publications__price-form">
             <span class="publications-form__heading price-heading">Цена</span>
             <div class="price-form__input-block">
@@ -1402,6 +1732,94 @@
             </div>
           </div>
         </div>
+        <div class="publications__mobile-list">
+          <ul class="publications__list">
+            <li class="publications__item">
+              <img class="publications__image" src="img/pub-1-1.jpg" alt="Искусство света">
+              <div class="publications__description">
+                <p class="publications__info">
+                  <span class="publications__name">Искусство света</span>
+                  <br>
+                  Иттен, Иоханнес
+                </p>
+                <span class="publications__price">620 руб</span>
+              </div>
+              <button class="publications__order-btn">Заказать</button>
+            </li>
+            <li class="publications__item">
+              <img class="publications__image" src="img/pub-1-2.jpg" alt="Типографика">
+              <div class="publications__description">
+                <p class="publications__info">
+                  <span class="publications__name">Типографика</span>
+                  <br>
+                  Рудер, Эмиль
+                </p>
+                <span class="publications__price">2 450 руб</span>
+              </div>
+              <button class="publications__order-btn">Заказать</button>
+            </li>
+            <li class="publications__item">
+              <img class="publications__image" src="img/pub-1-3.jpg" alt="Книга про буквы">
+              <div class="publications__description">
+                <p class="publications__info">
+                  <span class="publications__name">Книга про буквы</span>
+                  <br>
+                  Гордон, Юрий
+                </p>
+                <span class="publications__price">2 200 руб</span>
+              </div>
+              <button class="publications__order-btn">Заказать</button>
+            </li>
+            <li class="publications__item">
+              <img class="publications__image" src="img/pub-2-1.png" alt="Николай Ильин">
+              <div class="publications__description">
+                <p class="publications__info">
+                  <span class="publications__name">Николай Ильин</span>
+                  <br>
+                  Кричевский, Влади...
+                </p>
+                <span class="publications__price">1 100 руб</span>
+              </div>
+              <button class="publications__order-btn">Заказать</button>
+            </li>
+            <li class="publications__item">
+              <img class="publications__image" src="img/pub-2-2.png" alt="Модульные сетки в графическом дизайне">
+              <div class="publications__description">
+                <p class="publications__info">
+                  <span class="publications__name">Модульные сетки...</span>
+                  <br>
+                  Мюллер-Брокманн...
+                </p>
+                <span class="publications__price">1 450 руб</span>
+              </div>
+              <button class="publications__order-btn">Заказать</button>
+            </li>
+            <li class="publications__item">
+              <img class="publications__image" src="img/pub-2-3.png" alt="Эволюция графических стилей">
+              <div class="publications__description">
+                <p class="publications__info">
+                  <span class="publications__name">Эволюция графич...</span>
+                  <br>
+                  Хеллер, Чваст
+                </p>
+                <span class="publications__price">3 200 руб</span>
+              </div>
+              <button class="publications__order-btn">Заказать</button>
+            </li>
+            <li class="publications__item">
+              <img class="publications__image" src="img/pub-3-1.png" alt="Искусство и визуальное восприятие">
+              <div class="publications__description">
+                <p class="publications__info">
+                  <span class="publications__name">Искусство и визуа...</span>
+                  <br>
+                  Арнхейм, Рудольф
+                </p>
+                <span class="publications__price">2 200 руб</span>
+              </div>
+              <button class="publications__order-btn">Заказать</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -1480,6 +1898,40 @@
           </div>
           <div class="swiper-button-next project-next-btn"></div>
         </div>
+
+        <div class="swiper-container project-swiper mobile-wrapper">
+          <div class="swiper-button-prev project-prev-btn"></div>
+          <div class="swiper-wrapper project-wrapper">
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__freelands"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__ica"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__workhouse"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__1849"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__hiscox"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__camden"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__stassen"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__watts"></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partners-list__item"><a href="#" class="partners-list__link partners-list__link__esad"></a></div>
+            </div>
+          </div>
+          <div class="swiper-button-next project-next-btn"></div>
+        </div>
       </div>
     </section>
 
@@ -1534,6 +1986,14 @@
           </div>
         </div>
         <div class="contacts__right-block">
+          <div class="contacts__address__mobile">
+            <h3 class="block-heading">
+              Шоурум №2
+            </h3>
+            <p class="contacts__address-string">
+              Покровский бульвар, дом 24, строение 3
+            </p>
+          </div>
           <div class="map" id="map"></div>
         </div>
       </div>
@@ -1543,10 +2003,11 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer__logo">
-        <a href="#">
+        <a href="#" class="footer__logo-link">
           <img src="img/Blanchard.png" alt="Blanchard - художественная галерея">
           <br>
           <img src="img/lower-blanchard.png" alt="Blanchard - художественная галерея">
+          <img class="footer__logo-image__320" src="img/footer-logo-320.png" alt="Blanchard - художественная галерея">
         </a>
       </div>
       <ul class="footer-list">
@@ -1585,5 +2046,8 @@
   <script defer src="js/validate-form.js"></script>
   <script defer src="js/dropdown.js"></script>
   <script defer src="js/events.js"></script>
+  <script defer src="js/mobile-swiper.js"></script>
+  <script defer src="js/mobile-spoiler.js"></script>
+  <script defer src="js/burger.js"></script>
 </body>
 </html>
