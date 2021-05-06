@@ -2424,6 +2424,17 @@ section {
     margin-right: 30px;
   }
 
+  .section-hero {
+    height: 600px;
+    padding-top: 100px;
+    background: url("../img/hero-image-1440.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .hero__description {
+    margin-bottom: 40px;
+  }
+
   .choices {
     width: 300px;
     margin-bottom: 510px;
