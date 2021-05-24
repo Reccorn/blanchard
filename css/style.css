@@ -4021,6 +4021,10 @@ section {
     display: none;
   }
 
+  .hidden-events__list {
+    display: none;
+  }
+
   .events__mobile-swiper {
     position: relative;
     display: block;
