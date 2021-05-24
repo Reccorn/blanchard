@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="css/graph-modal.min.css">
 
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -17,6 +18,7 @@
   <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="js/graph-modal.min.js"></script>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -54,6 +56,18 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2725 5.32763 13.5104C5.32763 7.74821 10.0376 2.84674 16.1246 2.84674C22.2115 2.84674 26.9215 7.74821 26.9215 13.5104C26.9215 19.2725 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14867 8.76285 0.180832 16.1246 0.180832C23.4863 0.180832 29.4541 6.14867 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
           </svg>
         </button>
+        <div class="header-top__search-block">
+          <form action="https://jsonplaceholder.typicode.com/posts" class="form-search">
+            <button class="form-search__btn" type="submit" aria-label="Поиск">
+              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+              </svg>
+            </button>
+            <input id="hidden-search" type="text" class="form-search__input">
+          </form>
+          <button class="search-block__close-btn" aria-label="Закрыть меню поиска"></button>
+        </div>
       </div>
     </div>
 
@@ -152,7 +166,7 @@
             </li>
           </ul>
           <form action="https://jsonplaceholder.typicode.com/posts" class="form-search">
-            <button class="form-search__btn" type="submit">
+            <button class="form-search__btn" type="submit" aria-label="Поиск">
               <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
@@ -166,6 +180,7 @@
 
   <main>
     <div class="menu-block" id="burger-menu">
+      <button class="menu__close-btn" aria-label="Закрыть меню"></button>
       <ul class="menu-list">
         <li class="nav-menu__item"><a class="nav-menu__link" href="#">О нас</a></li>
         <li class="nav-menu__item"><a class="nav-menu__link" href="#">Галерея</a></li>
@@ -228,32 +243,32 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__first-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item first-slide__second-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item first-slide__third-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item first-slide__fourth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item first-slide__fifth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item first-slide__sixth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
+                  <li class="images-list__item first-slide__first-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="first-slide__first-img"></li>
+                  <li class="images-list__item first-slide__second-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="first-slide__second-img"></li>
+                  <li class="images-list__item first-slide__third-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="first-slide__third-img"></li>
+                  <li class="images-list__item first-slide__fourth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="first-slide__fourth-img"></li>
+                  <li class="images-list__item first-slide__fifth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="first-slide__fifth-img"></li>
+                  <li class="images-list__item first-slide__sixth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="first-slide__sixth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__first-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item second-slide__second-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item second-slide__third-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item second-slide__fourth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item second-slide__fifth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item second-slide__sixth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
+                  <li class="images-list__item second-slide__first-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="second-slide__first-img"></li>
+                  <li class="images-list__item second-slide__second-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="second-slide__second-img"></li>
+                  <li class="images-list__item second-slide__third-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="second-slide__third-img"></li>
+                  <li class="images-list__item second-slide__fourth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="second-slide__fourth-img"></li>
+                  <li class="images-list__item second-slide__fifth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="second-slide__fifth-img"></li>
+                  <li class="images-list__item second-slide__sixth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="second-slide__sixth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__first-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item third-slide__second-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item third-slide__third-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item third-slide__fourth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item third-slide__fifth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
-                  <li class="images-list__item third-slide__sixth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея"></li>
+                  <li class="images-list__item third-slide__first-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="third-slide__first-img"></li>
+                  <li class="images-list__item third-slide__second-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="third-slide__second-img"></li>
+                  <li class="images-list__item third-slide__third-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="third-slide__third-img"></li>
+                  <li class="images-list__item third-slide__fourth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="third-slide__fourth-img"></li>
+                  <li class="images-list__item third-slide__fifth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="third-slide__fifth-img"></li>
+                  <li class="images-list__item third-slide__sixth-img"><img class="images-list__item__hover-image" src="img/gallery-hover.png" alt="Галерея" data-graph-path="third-slide__sixth-img"></li>
                 </ul>
               </div>
             </div>
@@ -267,41 +282,41 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__first-img"></li>
-                  <li class="images-list__item first-slide__second-img"></li>
-                  <li class="images-list__item first-slide__fourth-img"></li>
-                  <li class="images-list__item first-slide__fifth-img"></li>
+                  <li class="images-list__item first-slide__first-img" data-graph-path="first-slide__first-img"></li>
+                  <li class="images-list__item first-slide__second-img" data-graph-path="first-slide__second-img"></li>
+                  <li class="images-list__item first-slide__fourth-img" data-graph-path="first-slide__fourth-img"></li>
+                  <li class="images-list__item first-slide__fifth-img" data-graph-path="first-slide__fifth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__third-img"></li>
-                  <li class="images-list__item second-slide__first-img"></li>
-                  <li class="images-list__item first-slide__sixth-img"></li>
-                  <li class="images-list__item second-slide__fourth-img"></li>
+                  <li class="images-list__item first-slide__third-img" data-graph-path="first-slide__third-img"></li>
+                  <li class="images-list__item second-slide__first-img" data-graph-path="second-slide__first-img"></li>
+                  <li class="images-list__item first-slide__sixth-img" data-graph-path="first-slide__sixth-img"></li>
+                  <li class="images-list__item second-slide__fourth-img" data-graph-path="second-slide__fourth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__second-img"></li>
-                  <li class="images-list__item second-slide__third-img"></li>
-                  <li class="images-list__item second-slide__fifth-img"></li>
-                  <li class="images-list__item second-slide__sixth-img"></li>
+                  <li class="images-list__item second-slide__second-img" data-graph-path="second-slide__second-img"></li>
+                  <li class="images-list__item second-slide__third-img" data-graph-path="second-slide__third-img"></li>
+                  <li class="images-list__item second-slide__fifth-img" data-graph-path="second-slide__fifth-img"></li>
+                  <li class="images-list__item second-slide__sixth-img" data-graph-path="second-slide__sixth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__first-img"></li>
-                  <li class="images-list__item third-slide__second-img"></li>
-                  <li class="images-list__item third-slide__fourth-img"></li>
-                  <li class="images-list__item third-slide__fifth-img"></li>
+                  <li class="images-list__item third-slide__first-img" data-graph-path="third-slide__first-img"></li>
+                  <li class="images-list__item third-slide__second-img" data-graph-path="third-slide__second-img"></li>
+                  <li class="images-list__item third-slide__fourth-img" data-graph-path="third-slide__fourth-img"></li>
+                  <li class="images-list__item third-slide__fifth-img" data-graph-path="third-slide__fifth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__third-img"></li>
+                  <li class="images-list__item third-slide__third-img" data-graph-path="third-slide__third-img"></li>
                   <li class="images-list__item"></li>
-                  <li class="images-list__item third-slide__sixth-img"></li>
+                  <li class="images-list__item third-slide__sixth-img" data-graph-path="third-slide__sixth-img"></li>
                 </ul>
               </div>
             </div>
@@ -318,92 +333,92 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__first-img"></li>
+                  <li class="images-list__item first-slide__first-img" data-graph-path="first-slide__first-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__second-img"></li>
+                  <li class="images-list__item first-slide__second-img" data-graph-path="first-slide__second-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__third-img"></li>
+                  <li class="images-list__item first-slide__third-img" data-graph-path="first-slide__third-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__fourth-img"></li>
+                  <li class="images-list__item first-slide__fourth-img" data-graph-path="first-slide__fourth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__fifth-img"></li>
+                  <li class="images-list__item first-slide__fifth-img" data-graph-path="first-slide__fifth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item first-slide__sixth-img"></li>
+                  <li class="images-list__item first-slide__sixth-img" data-graph-path="first-slide__sixth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__first-img"></li>
+                  <li class="images-list__item second-slide__first-img" data-graph-path="second-slide__first-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__second-img"></li>
+                  <li class="images-list__item second-slide__second-img" data-graph-path="second-slide__second-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__third-img"></li>
+                  <li class="images-list__item second-slide__third-img" data-graph-path="second-slide__third-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__fourth-img"></li>
+                  <li class="images-list__item second-slide__fourth-img" data-graph-path="second-slide__fourth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__fifth-img"></li>
+                  <li class="images-list__item second-slide__fifth-img" data-graph-path="second-slide__fifth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item second-slide__sixth-img"></li>
+                  <li class="images-list__item second-slide__sixth-img" data-graph-path="second-slide__sixth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__first-img"></li>
+                  <li class="images-list__item third-slide__first-img" data-graph-path="third-slide__first-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__second-img"></li>
+                  <li class="images-list__item third-slide__second-img" data-graph-path="third-slide__second-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__third-img"></li>
+                  <li class="images-list__item third-slide__third-img" data-graph-path="third-slide__third-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__fourth-img"></li>
+                  <li class="images-list__item third-slide__fourth-img" data-graph-path="third-slide__fourth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__fifth-img"></li>
+                  <li class="images-list__item third-slide__fifth-img" data-graph-path="third-slide__fifth-img"></li>
                 </ul>
               </div>
               <div class="swiper-slide">
                 <ul class="gallery__images-list">
-                  <li class="images-list__item third-slide__sixth-img"></li>
+                  <li class="images-list__item third-slide__sixth-img" data-graph-path="third-slide__sixth-img"></li>
                 </ul>
               </div>
             </div>
@@ -411,6 +426,297 @@
           <p class="gallery__authorisation-text__mobile">
             Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__authorisation-link" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией.
           </p>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first-slide__first-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-1-1-320.png" alt="Торс" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Торс (Фигура с розовым лицом)"</span>
+              <span class="modal__painting-date">1928-1929</span>
+              <p class="modal__description">
+                Продолжая идеи супрематизации человеческого образа Малевич создает эту картину, на которой изображен обезличенный торс, который больше напоминает манекен портного.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first-slide__second-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-1-2-320.png" alt="Женщина с граблями" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Женщина с граблями"</span>
+              <span class="modal__painting-date">1931-1932</span>
+              <p class="modal__description">
+                Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first-slide__third-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-1-3-320.png" alt="Уборка ржи" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Уборка ржи"</span>
+              <span class="modal__painting-date">1912</span>
+              <p class="modal__description">
+                Образы крестьянской жизни, образы сельского труда, воплощенные художником отличаются пронзительной нотой драматизма, о котором Малевичу и в голову не приходило помышлять ранее.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first-slide__fourth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-1-4-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Иван Клюн</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1915</span>
+              <p class="modal__description">
+                В 1915 году уже как последователь малевичевского супрематизма Клюн принял участие в «Последней футуристической выставке картин 0,10», опубликовав в её каталоге свой манифест.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first-slide__fifth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-1-5-320.png" alt="Крестьянка с ведрами" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Крестьянка с ведрами"</span>
+              <span class="modal__painting-date">1912-1913</span>
+              <p class="modal__description">
+                Малевич стремился очень четко передать цвета и держаться строго выдержанной плоскостности. Сельские жители, их труд и быт возвеличены
+                и героизированы.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first-slide__sixth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-1-6-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second-slide__first-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-2-1-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second-slide__second-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-2-2-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second-slide__third-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-2-3-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second-slide__fourth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-2-4-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second-slide__fifth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-2-5-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second-slide__sixth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-2-6-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="third-slide__first-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-3-1-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="third-slide__second-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-3-2-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="third-slide__third-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-3-3-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="third-slide__fourth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-3-4-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="third-slide__fifth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-3-5-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="third-slide__sixth-img">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <div class="modal-content__left-block">
+              <img class="modal__image" src="img/gallery-3-6-320.png" alt="Супрематизм" loading="lazy">
+            </div>
+            <div class="modal-content__right-block">
+              <span class="modal__author-name">Казимир Малевич</span>
+              <span class="modal__painting-name">"Супрематизм"</span>
+              <span class="modal__painting-date">1925</span>
+              <p class="modal__description">
+                В начале ХХ века авангардное искусство «пополнилось» новым направлением — супрематизмом. Его основателем стал Казимир Малевич.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -443,7 +749,7 @@
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
         </p>
         <div class="catalog__content-blocks catalog__content__active" data-target="fre">
-          <div class="catalog__left-block" data-target="deyck">
+          <div id="author-deyck" class="catalog__left-block" data-target="deyck">
             <img src="img/barthelemy-deyck.jpg" alt="Бартелеми д'Эйк" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Бартелеми д'Эйк
@@ -453,7 +759,7 @@
               Имя Бартелеми д’Эйка давно известно по историческим документам. Он был придворным художником короля Рене Доброго и имел высокую репутацию как выдающийся мастер, о чём свидетельствуют отзывы современников. Однако конкретной информации о нём немного.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="dombe">
+          <div id="author-dombe" class="catalog__left-block" data-target="dombe">
             <img src="img/dombe.jpg" alt="Гийом Домбе" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Гийом Домбе
@@ -463,7 +769,7 @@
               Мастерская Домбе получала самые престижные заказы, она выполняла работы по изготовлению и установке витражей в папском дворце в Авиньоне (1414 год), в Соборе Экса (1415, 1444, 1449 годы), в синагоге Экса (1418 год), в францисканском храме Марселя (1425 год), в храме Св. Марты в Тарасконе (1432 год) и в капелле Св. Петра Люксембургского в Авиньоне (1448 год). Современные исследователи считают, что из пяти созданных Домбе витражей капеллы Св. Митра в соборе Сен Совёр в Экс-ан-Провансе до наших дней дошли лишь изображения Св. Митра, св. Блеза и святого епископа. В них видно влияние как бургундского, так и провансальского и нидерландского искусства.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="duvet">
+          <div id="author-duvet" class="catalog__left-block" data-target="duvet">
             <h3 class="catalog__author-name">
               Жак Дюве
             </h3>
@@ -472,7 +778,7 @@
               Французский ювелир и первый значительный французский гравёр, декоратор королевских праздников, медальер и эмальер. Отождествляется некоторыми искусствоведами с Жаном Дюве (по прозвищу Дро) из Дижона, который провел шестнадцать лет в Женеве.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="hesdin">
+          <div id="author-hesdin" class="catalog__left-block" data-target="hesdin">
             <img src="img/hesdin.jpg" alt="Жакмар де Эсден" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Жакмар де Эсден
@@ -482,7 +788,7 @@
               По определению Анн Гранбулан, Жакмар «демонстрирует определённое мастерство в изображении пространства, показывая таким образом, что усвоил уроки сиенской школы». Соединив достижения итальянской живописи и реализм, характерный для художников севера Европы, он придерживался более естественной манеры исполнения, в отличие от идеализированного искусства Жана Пюселя. Помимо миниатюр Жакмар выполнял элементы декора манускриптов — обрамления с фигурами животных и растительными мотивами.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="iverny">
+          <div id="author-iverny" class="catalog__left-block" data-target="iverny">
             <img src="img/iverny.jpg" alt="Жак Иверни" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Жак Иверни
@@ -492,7 +798,7 @@
               Самым крупным произведением Иверни считается фресковый цикл в большом зале (Sala Baronale) замка Ла Манта в Пьемонте, созданный в 1411—16 годах. На четырёх стенах зала написаны несколько фресок с тематикой, характерной для времён господства в искусстве стиля «интернациональной готики»: три стены заняты портретами «героев и героинь», на четвёртой расположена фреска с популярной средневековой легендой о «Фонтане молодости», окунувшись в который можно вернуть молодость, силу и красоту.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="carton">
+          <div id="author-carton" class="catalog__left-block" data-target="carton">
             <h3 class="catalog__author-name">
               Ангерран Картон
             </h3>
@@ -501,7 +807,7 @@
               Ангерран Картон родился около 1415 года на севере Франции, в городе Лане; образование получил в 1425-30 годах. Исторические источники сохранили несколько имён Картона. Его пикардийским именем было Шарретон или Шарретье (Charretier), однако когда он переехал в Прованс, имя было латинизировано, и звучало как Картон (Carton или Quarton). Судя по многочисленным готическим элементам его художественного почерка, он сформировался под влиянием стиля, господствовавшего на севере Франции. Величественностью своих композиций, а также некоторыми своими образами он обязан скульптуре готических храмов. В годы формирования Картона в Пикардии было сильным бургундское художественное влияние, в формировании художника сыграли роль произведения Яна ван Эйка, Робера Кампена и Рогира Ван дер Вейдена, которые он, вне сомнения, там видел. Благодаря натурализму этих мастеров, усвоенному художником, он стал достаточно «прогрессивным» для живописи середины XV века. В его произведениях видно внимание к формам предметов, характерным чертам человеческих лиц, пейзажу.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="marmion">
+          <div id="author-marmion" class="catalog__left-block" data-target="marmion">
             <h3 class="catalog__author-name">
               Симон Мармион
             </h3>
@@ -510,7 +816,7 @@
               Симон Мармион в своё время был более известен как миниатюрист, нежели как мастер станковой картины, однако о его деятельности на ниве иллюстрирования книг сохранилось только одно документальное свидетельство: в 1470 году художнику «Simon Marmion, elumineur» была выплачена окончательная сумма за роскошный бревиарий, заказанный Филиппом Добрым тремя годами ранее, в 1467 году.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="perreal">
+          <div id="author-perreal" class="catalog__left-block" data-target="perreal">
             <h3 class="catalog__author-name">
               Жан Перреаль
             </h3>
@@ -519,7 +825,7 @@
               Иногда называемый Переалем или Жаном де Парисом — французский художник, портретист французской королевской семьи в первой половине XVI века, а также архитектор, скульптор и автор иллюминированных рукописей. Вёл активную деятельность в основном во Франции, а также в Италии и Лондоне.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="testard">
+          <div id="author-testard" class="catalog__left-block" data-target="testard">
             <h3 class="catalog__author-name">
               Робине Тестар
             </h3>
@@ -528,7 +834,7 @@
               Робине Тестар — художник, чьи работы трудно атрибутировать, так как не был подписан ни один из его манускриптов. В 1894 году анонимный художник-миниатюрист, условно названный раньше «Мастер Карла Ангулемского», был идентифицирован искусствоведом Paul Durrieu с Робине Тестаром, известным по документам уплаты жалования графом Ангулемским.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="froment">
+          <div id="author-froment" class="catalog__left-block" data-target="froment">
             <h3 class="catalog__author-name">
               Никола Фроман
             </h3>
@@ -537,7 +843,7 @@
               До наших дней дошло всего две достоверные работы Никола Фромана. Это триптих «Воскрешение Лазаря» и триптих «Неопалимая купина». Остальные немногие произведения приписываются ему по аналогии.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="fouquet">
+          <div id="author-fouquet" class="catalog__left-block" data-target="fouquet">
             <img src="img/fouquet.png" alt="Жан Фуке" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Жан Фуке
@@ -547,7 +853,7 @@
               Пользовавшийся известностью при жизни, после своей смерти (между 1478 и 1481 годами) Фуке был надолго забыт. Его творчество было вновь оценено по достоинству лишь в XIX веке благодаря интересу представителей романтизма к средневековому искусству.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="dumonstier">
+          <div id="author-dumonstier" class="catalog__left-block" data-target="dumonstier">
             <img src="img/dumonstier.jpg" alt="Жоффруа Дюмустье" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Жоффруа Дюмустье
@@ -557,7 +863,7 @@
               Жоффруа Дюмустье — художник драматического дарования, часто использовал резкие контрасты света и тени, его работы отличаются повышенной экспрессивностью. Нервные штрихи переходят в небрежные пятна, автору свойственны широта восприятия мира и буйный темперамент.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="quesnel">
+          <div id="author-quesnel" class="catalog__left-block" data-target="quesnel">
             <img src="img/quesnel.png" alt="Франсуа Кенель" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Франсуа Кенель
@@ -567,7 +873,7 @@
               Испытал значительное влияние Пьера Дюмустье и Жоржа Боба. В некоторых работах прослеживается и влияние Франсуа Клуэ. В портретах показывал заурядность придворных; иногда искусствоведы сопоставляют их с анекдотами той поры, демонстрирующими ту же развязность и показную экстравагантность, однако эти портреты далеки от реализма. Они полностью лишены героизма предшествующей эпохи. В творчестве Кенеля наблюдается постепенный переход от карандашного к живописному портрету. Он переносит акцент с конструктивизма на чувственность. Художник воспринимается как родоначальник салонного и парадного портрета. Для портретов характерна грация и внешний блеск, но они свидетельствуют о слабом знании художником анатомии.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="agar">
+          <div id="author-agar" class="catalog__left-block" data-target="agar">
             <img src="img/agar.jpg" alt="Жак д'Агар" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Жак д'Агар
@@ -577,7 +883,7 @@
               Агар бесспорно имел влияние на живописцев Дании, где он провёл лучшее время своей жизни. Художник умер в 1715 году в Копенгагене. Сын Агара Шарль также был художник-портретист.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="rigaud">
+          <div id="author-rigaud" class="catalog__left-block" data-target="rigaud">
             <img src="img/rigaud.jpg" alt="Гиацинт Риго" class="catalog__image" loading="lazy">
             <h3 class="author-heading">
               Гиацинт Риго
@@ -587,7 +893,7 @@
               Французский художник, мастер парадного барочного портрета времён Людовика XIV и Людовика XV.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="bachelier">
+          <div id="author-bachelier" class="catalog__left-block" data-target="bachelier">
             <img src="img/bachelier.jpg" alt="Жан-Жак Башелье" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Жан-Жак Башелье
@@ -597,7 +903,7 @@
               Жан-Жак Башелье — художник, основной темой картин которого были цветы, плоды и животные, автор многих натюрмортов. Благодаря полотнам с цветочными композициями, которые до него мало практиковались в Королевской академии живописи и скульптуры в середине XVIII века, стал широко известен и получил королевскую пенсию в 1749 году.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="watelet">
+          <div id="author-watelet" class="catalog__left-block" data-target="watelet">
             <img src="img/watelet.jpg" alt="Клод-Анри Ватле" class="catalog__image" loading="lazy">
             <h3 class="author-heading">
               Клод-Анри Ватле
@@ -607,7 +913,7 @@
               Французский художник, гравёр и поэт, более известный своими сочинениями об искусстве.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="pujol">
+          <div id="author-pujol" class="catalog__left-block" data-target="pujol">
             <img src="img/pujol.jpg" alt="Абель де Пюжоль" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Абель де Пюжоль
@@ -617,7 +923,7 @@
               К главным произведениям Александра Пюжоля принадлежат фрески в часовне св. Роха в церкви Сен-Сюльпис, голькели зала парижской биржи, стенная и плафонная живопись лестничной отделки в Лувре, уничтоженная в 1856 году, 22 картины в галерее Дианы в Фонтенбло.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="gerard">
+          <div id="author-gerard" class="catalog__left-block" data-target="gerard">
             <img src="img/gerard.jpg" alt="Франсуа Жерар" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Франсуа Жерар
@@ -627,7 +933,7 @@
               Как мастер холодного, просчитанного классицизма Жерар следовал по стопам своего наставника Давида. Текстуры на его полотнах всегда тщательно проработаны, формы моделированы с точностью скульптора, эмоции сведены к минимуму. Его портреты элегантнее портретов Давида, многие представляют собой идеал салонной грации начала XIX века.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="valtat">
+          <div id="author-valtat" class="catalog__left-block" data-target="valtat">
             <img src="img/valtat.jpg" alt="Луи Вальта" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Луи Вальта
@@ -645,17 +951,17 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="deyck">Бартелеми д`Эйк</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="dombe">Домбе, Гийом</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="duvet">Дюве, Жак</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="hesdin">Жакмар де Эсден</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="iverny">Иверни, Жак</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="carton">Картон Ангерран</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="marmion">Мармион, Симон</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="perreal">Перреаль, Жан</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="testard">Тестар, Робине</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="froment">Фроман, Никола</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="fouquet">Фуке, Жан</a></li>
+                    <li class="authors-list__item"><a href="#author-deyck" class="authors-list__link" data-path="deyck">Бартелеми д`Эйк</a></li>
+                    <li class="authors-list__item"><a href="#author-dombe" class="authors-list__link" data-path="dombe">Домбе, Гийом</a></li>
+                    <li class="authors-list__item"><a href="#author-duvet" class="authors-list__link" data-path="duvet">Дюве, Жак</a></li>
+                    <li class="authors-list__item"><a href="#author-hesdin" class="authors-list__link" data-path="hesdin">Жакмар де Эсден</a></li>
+                    <li class="authors-list__item"><a href="#author-iverny" class="authors-list__link" data-path="iverny">Иверни, Жак</a></li>
+                    <li class="authors-list__item"><a href="#author-carton" class="authors-list__link" data-path="carton">Картон Ангерран</a></li>
+                    <li class="authors-list__item"><a href="#author-marmion" class="authors-list__link" data-path="marmion">Мармион, Симон</a></li>
+                    <li class="authors-list__item"><a href="#author-perreal" class="authors-list__link" data-path="perreal">Перреаль, Жан</a></li>
+                    <li class="authors-list__item"><a href="#author-testard" class="authors-list__link" data-path="testard">Тестар, Робине</a></li>
+                    <li class="authors-list__item"><a href="#author-froment" class="authors-list__link" data-path="froment">Фроман, Никола</a></li>
+                    <li class="authors-list__item"><a href="#author-fouquet" class="authors-list__link" data-path="fouquet">Фуке, Жан</a></li>
                   </ul>
                 </div>
               </li>
@@ -665,8 +971,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="dumonstier">Дюмустье, Жоффруа</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="quesnel">Кенель, Франсуа</a></li>
+                    <li class="authors-list__item"><a href="#author-dumonstier" class="authors-list__link" data-path="dumonstier">Дюмустье, Жоффруа</a></li>
+                    <li class="authors-list__item"><a href="#author-quesnel" class="authors-list__link" data-path="quesnel">Кенель, Франсуа</a></li>
                   </ul>
                 </div>
               </li>
@@ -676,8 +982,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="agar">Агар, Жак</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="rigaud">Риго, Гиацинт</a></li>
+                    <li class="authors-list__item"><a href="#author-agar" class="authors-list__link" data-path="agar">Агар, Жак</a></li>
+                    <li class="authors-list__item"><a href="#author-rigaud" class="authors-list__link" data-path="rigaud">Риго, Гиацинт</a></li>
                   </ul>
                 </div>
               </li>
@@ -687,8 +993,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="bachelier">Башелье, Жан-Жак</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="watelet">Ватле, Клод-Анри</a></li>
+                    <li class="authors-list__item"><a href="#author-bachelier" class="authors-list__link" data-path="bachelier">Башелье, Жан-Жак</a></li>
+                    <li class="authors-list__item"><a href="#author-watelet" class="authors-list__link" data-path="watelet">Ватле, Клод-Анри</a></li>
                   </ul>
                 </div>
               </li>
@@ -698,8 +1004,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="pujol">Абель де Пюжоль</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="gerard">Жерар, Франсуа</a></li>
+                    <li class="authors-list__item"><a href="#author-pujol" class="authors-list__link" data-path="pujol">Абель де Пюжоль</a></li>
+                    <li class="authors-list__item"><a href="#author-gerard" class="authors-list__link" data-path="gerard">Жерар, Франсуа</a></li>
                   </ul>
                 </div>
               </li>
@@ -709,7 +1015,7 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="valtat">Вальта, Луи</a></li>
+                    <li class="authors-list__item"><a href="#author-valtat" class="authors-list__link" data-path="valtat">Вальта, Луи</a></li>
                   </ul>
                 </div>
               </li>
@@ -725,7 +1031,7 @@
           </div>
         </div>
         <div class="catalog__content-blocks" data-target="ger">
-          <div class="catalog__left-block" data-target="wolgemut">
+          <div id="author-wolgemut" class="catalog__left-block" data-target="wolgemut">
             <img src="img/wolgemut.jpg" alt="Михаэль Вольгемут" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Михаэль Вольгемут
@@ -735,7 +1041,7 @@
               К лучшим работам Вольгемута относятся: алтарь Перингсдёрфферов (ныне в Церкви мира в Нюрнберге), резной, украшенный живописью алтарь церкви св. Марии в Цвиккау, роспись зала ратуши в Госларе, алтарь в Городской церкви Иоанна Крестителя в Швабахе и четыре алтарные панели в мюнхенской пинакотеке. Вольгемут писал также портреты.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="durer">
+          <div id="author-durer" class="catalog__left-block" data-target="durer">
             <img src="img/durer.jpg" alt="Альбрехт Дюрер" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Альбрехт Дюрер
@@ -745,7 +1051,7 @@
               Живописное творчество Дюрера повлияло на формирование и развитие дунайской школы. Ученики и последователи Дюрера, работавшие в области книжной иллюстрации, орнаментики, шрифтов, заставок и виньеток, получили прозвание: «мастера малого формата», или кляйнмайстеры.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="aachen">
+          <div id="author-aachen" class="catalog__left-block" data-target="aachen">
             <img src="img/aachen.jpg" alt="Ханс фон Аахен" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Ханс фон Аахен
@@ -755,7 +1061,7 @@
               Картины фон Аахена, изображающие изящные, удлинённые фигуры (также как и работы его коллеги Бартоломеуса Шпрангера), являются образцами сложного искусства маньеризма, бывшим тогда ведущим стилем в искусстве Северной Европы. Ханс фон Аахен писал картины мифологической, сложной аллегорической и религиозной тематики, а также портреты.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="huber">
+          <div id="author-huber" class="catalog__left-block" data-target="huber">
             <img src="img/huber.jpg" alt="Вольф Губер" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Вольф Губер
@@ -765,7 +1071,7 @@
               Губер известен как художник, создавший множество превосходных пейзажных рисунков пером. Эти динамичные композиции представляют собой самоценные произведения, что было в основном несвойственно для рисунка того времени. В его последующих живописных произведениях на религиозные темы, а также выполненных им портретах, также большую роль играют пейзажные фоны.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="willmann">
+          <div id="author-willmann" class="catalog__left-block" data-target="willmann">
             <img src="img/willman.jpg" alt="Михаэль Вильманн" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Михаэль Вильманн
@@ -775,7 +1081,7 @@
               Библейские сюжеты занимали основное место в творчестве Вильманна. Многочисленные фрески художника до сегодняшнего дня украшают церкви и монастыри Силезии.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="elsheimer">
+          <div id="author-elsheimer" class="catalog__left-block" data-target="elsheimer">
             <img src="img/elsheimer.jpg" alt="Адам Эльсхаймер" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Адам Эльсхаймер
@@ -785,7 +1091,7 @@
               Адам Эльсхаймер является одним из первых художников, очень точно передавших небесную сферу. С большой вероятностью можно сказать, что 16 июня 1609 года около 21.45 он наблюдал в окрестностях Рима звёздное небо в подзорную трубу. Свои наблюдения он запечатлел на картине «Бегство в Египет», которая находится в мюнхенской пинакотеке. Это выяснили ученые Немецкого музея в 2005 году. Луна и звёзды Млечного Пути, изображённые на картине, соответствуют широте Рима.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="luhn">
+          <div id="author-luhn" class="catalog__left-block" data-target="luhn">
             <img src="img/luhn.jpg" alt="Иоахим Лун" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Иоахим Лун
@@ -795,7 +1101,7 @@
               Художественные произведения работы Иоахима Луна, несмотря на ощутимое влияние на него голландской живописи XVII столетия, указывают на выработанный им оригинальный, самостоятельный северо-германский стиль, особенно ярко проявившийся в семейном портрете 1673 года, изображающем художника с супругой, а также покойного к тому времени тестя (на что указывает аллегорический череп в его руке) с женой. Полотно хранится в художественной галерее Герцога Антона-Ульриха в Брауншвейге.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="douven">
+          <div id="author-douven" class="catalog__left-block" data-target="douven">
             <img src="img/douven.jpg" alt="Ян Франс ван Дувен" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Ян Франс ван Дувен
@@ -805,7 +1111,7 @@
               Я. Ф.ван Дувен сопровождал также своего государя, Иоганна-Вильгельма, в его поездке в Вену, и там написал портреты императора и его супруги, а также портреты других князей и аристократов или знаменитостей, таких как известный музыкант Арканджело Корелли.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="achenbach">
+          <div id="author-achenbach" class="catalog__left-block" data-target="achenbach">
             <img src="img/achenbach.jpg" alt="Освальд Ахенбах" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Освальд Ахенбах
@@ -815,7 +1121,7 @@
               В Италии Ахенбах написал свои лучшие работы — пейзажи южной Италии, парады, праздничные процессии, сцены из народной жизни. В пейзажах уделял особое внимание световым контрастам. В 1863—1872 годах занимал должность профессора ландшафтной живописи в дюссельдорфской Академии художеств. Умер от воспаления лёгких. Картины Ахенбаха представлены во многих художественных галереях Европы и Америки, включая Музей Орсе и Эрмитаж в Санкт-Петербурге.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="hildebrand">
+          <div id="author-hildebrand" class="catalog__left-block" data-target="hildebrand">
             <img src="img/hildebrand.jpg" alt="Адольф фон Гильдебранд" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Адольф фон Гильдебранд
@@ -825,7 +1131,7 @@
               Адольф фон Гильдебранд вместе с философом Конрадом Фидлером (1841—1895) и живописцем Хансом фон Маре (1837—1887) был членом «Римского кружка». Маре и Фидлер, приехав в Италию в 1865 г., были поражены особенным «чувством формы», присущим старым итальянским мастерам. «Римские немцы» пытались противопоставить классическую традицию распространённым в то время в немецком искусстве натурализму, салонности и академизму. В своих живописных произведениях Маре стремился отойти от «бездумного копирования действительности» и научиться выявлять «пластическую определённость», структурную основу изображения. Философ Конрад Фидлер рассматривал произведение изобразительного искусства в качестве феномена «чистой визуальности», автономной формальной структуры, несводимой к иным формам мышления.
             </p>
           </div>
-          <div class="catalog__left-block" data-target="jorres">
+          <div id="author-jorres" class="catalog__left-block" data-target="jorres">
             <img src="img/jorres.jpg" alt="Карл Йеррес" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Карл Йеррес
@@ -843,8 +1149,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="wolgemut">Вольгемут, Михаэль</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="durer">Дюрер, Альбрехт</a></li>
+                    <li class="authors-list__item"><a href="#author-wolgemut" class="authors-list__link" data-path="wolgemut">Вольгемут, Михаэль</a></li>
+                    <li class="authors-list__item"><a href="#author-durer" class="authors-list__link" data-path="durer">Дюрер, Альбрехт</a></li>
                   </ul>
                 </div>
               </li>
@@ -854,8 +1160,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path=aachen>Аахен, Ханс фон</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="huber">Губер, Вольф</a></li>
+                    <li class="authors-list__item"><a href="#author-aachen" class="authors-list__link" data-path=aachen>Аахен, Ханс фон</a></li>
+                    <li class="authors-list__item"><a href="#author-huber" class="authors-list__link" data-path="huber">Губер, Вольф</a></li>
                   </ul>
                 </div>
               </li>
@@ -865,8 +1171,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="willmann">Вильманн, Михаэль</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="elsheimer">Эйльсхаймер, Адам</a></li>
+                    <li class="authors-list__item"><a href="#author-willmann" class="authors-list__link" data-path="willmann">Вильманн, Михаэль</a></li>
+                    <li class="authors-list__item"><a href="#author-elsheimer" class="authors-list__link" data-path="elsheimer">Эйльсхаймер, Адам</a></li>
                   </ul>
                 </div>
               </li>
@@ -876,8 +1182,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors__list__item"><a class="authors-list__link" data-path="luhn">Лун, Иоахим</a></li>
-                    <li class="authors__list__item"><a class="authors-list__link" data-path="douven">Дувен, Ян Франс ван</a></li>
+                    <li class="authors__list__item"><a href="#author-luhn" class="authors-list__link" data-path="luhn">Лун, Иоахим</a></li>
+                    <li class="authors__list__item"><a href="#author-douven" class="authors-list__link" data-path="douven">Дувен, Ян Франс ван</a></li>
                   </ul>
                 </div>
               </li>
@@ -887,8 +1193,8 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="achenbach">Ахенбах, Освальд</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="hildebrand">Гильдебранд, Адольф фон</a></li>
+                    <li class="authors-list__item"><a href="#author-achenbach" class="authors-list__link" data-path="achenbach">Ахенбах, Освальд</a></li>
+                    <li class="authors-list__item"><a href="#author-hildebrand" class="authors-list__link" data-path="hildebrand">Гильдебранд, Адольф фон</a></li>
                   </ul>
                 </div>
               </li>
@@ -898,7 +1204,7 @@
                 </div>
                 <div class="ages__content">
                   <ul class="ages__authors-list">
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="jorres">Йеррес, Карл</a></li>
+                    <li class="authors-list__item"><a href="#author-jorres" class="authors-list__link" data-path="jorres">Йеррес, Карл</a></li>
                   </ul>
                 </div>
               </li>
@@ -914,7 +1220,7 @@
           </div>
         </div>
         <div class="catalog__content-blocks" data-target="ita">
-          <div class="catalog__left-block" data-target="girlandayo">
+          <div id="author-girlandayo" class="catalog__left-block" data-target="girlandayo">
             <img src="img/girlandayo.jpg" alt="Доменико Гирландайо" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Доменико Гирландайо
@@ -943,7 +1249,7 @@
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Бьяджо д’Антонио Туччи</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Веккьетта</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Андреа Верроккьо</a></li>
-                    <li class="authors-list__item"><a class="authors-list__link" data-path="girlandayo">Доменико Гирландайо</a></li>
+                    <li class="authors-list__item"><a href="#author-girlandayo" class="authors-list__link" data-path="girlandayo">Доменико Гирландайо</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Беноццо Гоццоли</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Граначчи, Франческо</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Грегорио ди Чекко</a></li>
@@ -1848,7 +2154,7 @@
           Проекты
         </h2>
         <p class="projects__description">
-          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__tooltip"><span class="projects__popup">Пример современных тенденций - современная методология разработки </span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__tooltip"><span class="projects__popup projects__popup__second">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span> исключительно в разрезе маркетинговых и финансовых <span class="projects__tooltip"><span class="projects__popup projects__popup__third">В стремлении повысить качество</span></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__tooltip" data-path="first-tool"><span class="projects__popup" data-target="first-tool">Пример современных тенденций - современная методология разработки </span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__tooltip" data-path="second-tool"><span class="projects__popup projects__popup__second" data-target="second-tool">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span> исключительно в разрезе маркетинговых и финансовых <span class="projects__tooltip" data-path="third-tool"><span class="projects__popup projects__popup__third" data-target="third-tool">В стремлении повысить качество</span></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
           <a href="#" class="projects__blanchard-link" aria-label="Наши проекты">blanchard-art.ru/projects/about</a>
         </p>
         <h3 class="block-heading partner-heading">
@@ -2076,5 +2382,9 @@
   <script defer src="js/mobile-swiper.js"></script>
   <script defer src="js/mobile-spoiler.js"></script>
   <script defer src="js/burger.js"></script>
+  <script defer src="js/search-block.js"></script>
+  <script defer src="js/mobile-tooltips.js"></script>
+  <script defer src="js/modal-windows.js"></script>
+  <script defer src="js/smooth-scroll.js"></script>
 </body>
 </html>

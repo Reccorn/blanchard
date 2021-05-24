@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       const activeBtn = document.querySelector(`[data-path="${path}"]`);
-      // document.querySelector(`[data-path="${path}"]`).classList.add('bottom-menu-link-active');
       activeBtn.classList.add('menu-list__btn__active');
       document.querySelector(`[data-target="${path}"]`).classList.add('dropdown__active');
 
