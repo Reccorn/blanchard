@@ -27,6 +27,83 @@
   to {background-size: 200%;}
 }
 
+@-webkit-keyframes hero {
+  from {background-size: 100%;}
+  to {background-size: 200%;}
+}
+
+@keyframes hero-images-1920 {
+  0% {
+    background-image: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg");
+  }
+  50% {
+    background-image: url("../img/hero-second-1920.png");
+  }
+  100% {
+    background-image: url("../img/hero-third-1920.png");
+  }
+}
+
+@keyframes hero-images-1440 {
+  0% {
+    background-image: url("../img/hero-image-1440.jpg");
+  }
+  50% {
+    background-image: url("../img/hero-second-1440.png");
+  }
+  100% {
+    background-image: url("../img/hero-third-1440.png");
+  }
+}
+
+@keyframes hero-images-1024 {
+  0% {
+    background-image: url("../img/hero-img-1024.png");
+  }
+  50% {
+    background-image: url("../img/hero-second-1024.png");
+  }
+  100% {
+    background-image: url("../img/hero-third-1024.png");
+  }
+}
+
+@keyframes hero-images-768 {
+  0% {
+    background-image: url("../img/hero-image-768.png");
+  }
+  50% {
+    background-image: url("../img/hero-second-768.png");
+  }
+  100% {
+    background-image: url("../img/hero-third-768.png");
+  }
+}
+
+@keyframes hero-images-320 {
+  0% {
+    background-image: url("../img/hero-image-320.png");
+  }
+  50% {
+    background-image: url("../img/hero-second-320.png");
+  }
+  100% {
+    background-image: url("../img/hero-third-320.png");
+  }
+}
+
+@-moz-keyframes hero-images-1920 {
+  0% {
+    background-image: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg");
+  }
+  50% {
+    background-image: url("../img/hero-second-1920.png");
+  }
+  100% {
+    background-image: url("../img/hero-third-1920.png");
+  }
+}
+
 @keyframes catalog {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -710,10 +787,17 @@ section {
   max-height: 700px;
   padding-top: 141px;
   padding-bottom: 122px;
-  background: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg") no-repeat 40% 100%;
+  /*background: url("../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg") no-repeat 40% 100%;*/
   background-size: cover;
-  animation: hero 60s infinite ease-in-out;
+  animation: hero 60s infinite ease-in-out, hero-images-1920 30s infinite ease-in-out;
   animation-direction: alternate;
+
+  -moz-animation-name: hero, hero-images-1920;
+  -moz-animation-duration: 60s, 30s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-direction: alternate;
+  -moz-transition: background 1s ease-in-out;
 }
 
 .hero__main-heading {
@@ -1145,14 +1229,12 @@ section {
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
-  text-shadow: 0 4px 4px #999999;
 }
 
 .modal__painting-name {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  text-shadow: 0 4px 4px #999999;
 }
 
 .modal__painting-date {
@@ -1160,7 +1242,6 @@ section {
   font-size: 12px;
   line-height: 16px;
   color: #969696;
-  text-shadow: 0 4px 4px #999999;
 }
 
 .modal__description {
@@ -1168,7 +1249,6 @@ section {
   margin: 0;
   font-size: 16px;
   line-height: 32px;
-  text-shadow: 0 4px 4px #999999;
 }
 
 .modal__close {
@@ -2390,8 +2470,10 @@ section {
   .section-hero {
     height: 600px;
     padding-top: 100px;
-    background: url("../img/hero-image-1440.jpg") no-repeat;
+    /*background: url("../img/hero-image-1440.jpg") no-repeat;*/
     background-size: cover;
+    animation: hero 60s infinite ease-in-out, hero-images-1440 30s infinite ease-in-out;
+    animation-direction: alternate;
   }
 
   .hero__description {
@@ -2551,16 +2633,14 @@ section {
     top: 4px;
   }
 
-  /*.nav-menu__item:not(:last-child) {*/
-  /*  margin-bottom: 20px;*/
-  /*}*/
-
   .section-hero {
     height: 668px;
     padding-top: 105px;
     padding-bottom: 114px;
-    background: url("../img/hero-img-1024.png") no-repeat;
+    /*background: url("../img/hero-img-1024.png") no-repeat;*/
     background-size: cover;
+    animation: hero 60s infinite ease-in-out, hero-images-1024 30s infinite ease-in-out;
+    animation-direction: alternate;
   }
 
   .hero__description {
@@ -2637,21 +2717,8 @@ section {
     padding-bottom: 90px;
   }
 
-  .modal__author-name {
-    text-shadow: none;
-  }
-
-  .modal__painting-name {
-    text-shadow: none;
-  }
-
-  .modal__painting-date {
-    text-shadow: none;
-  }
-
   .modal__description {
     width: 231px;
-    text-shadow: none;
   }
 
   .catalog__languages-list {
@@ -2988,8 +3055,10 @@ section {
     height: 668px;
     padding-top: 105px;
     padding-bottom: 114px;
-    background: url("../img/hero-image-768.png") no-repeat;
+    /*background: url("../img/hero-image-768.png") no-repeat;*/
     background-size: cover;
+    animation: hero 60s infinite ease-in-out, hero-images-768 30s infinite ease-in-out;
+    animation-direction: alternate;
   }
 
   .hero__heading {
@@ -3087,21 +3156,8 @@ section {
     padding-bottom: 122px;
   }
 
-  .modal__author-name {
-    text-shadow: none;
-  }
-
-  .modal__painting-name {
-    text-shadow: none;
-  }
-
-  .modal__painting-date {
-    text-shadow: none;
-  }
-
   .modal__description {
     width: 251px;
-    text-shadow: none;
   }
 
   .section-catalog {
@@ -3119,6 +3175,10 @@ section {
 
   .catalog__content-blocks {
     flex-direction: column-reverse;
+  }
+
+  .catalog__left-block {
+    width: 100%;
   }
 
    .catalog__right-block {
@@ -3626,8 +3686,10 @@ section {
     height: 310px;
     padding-top: 30px;
     padding-bottom: 45px;
-    background: url("../img/hero-image-320.png") no-repeat;
+    /*background: url("../img/hero-image-320.png") no-repeat;*/
     background-size: cover;
+    animation: hero 60s infinite ease-in-out, hero-images-320 30s infinite ease-in-out;
+    animation-direction: alternate;
   }
 
   .hero__heading {
@@ -3878,22 +3940,8 @@ section {
     padding: 17px 20px 26px 20px;
   }
 
-  .modal__author-name {
-    text-shadow: none;
-  }
-
-  .modal__painting-name {
-    text-shadow: none;
-  }
-
-  .modal__painting-date {
-    margin-bottom: 12px;
-    text-shadow: none;
-  }
-
   .modal__description {
     width: 249px;
-    text-shadow: none;
   }
 
   .modal__close {

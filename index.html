@@ -729,13 +729,13 @@
           </h2>
           <ul class="catalog__languages-list">
             <li class="languages-list__item">
-              <button class="languages-list__btn languages-list__btn__french languages-list__btn__active" data-path="fre" aria-label="Французские авторы"></button>
+              <button class="languages-list__btn languages-list__btn__french" data-path="fre" aria-label="Французские авторы"></button>
             </li>
             <li class="languages-list__item">
               <button class="languages-list__btn languages-list__btn__german" data-path="ger" aria-label="Немецкие авторы"></button>
             </li>
             <li class="languages-list__item">
-              <button class="languages-list__btn languages-list__btn__italian" data-path="ita" aria-label="Итальянские авторы"></button>
+              <button class="languages-list__btn languages-list__btn__italian  languages-list__btn__active" data-path="ita" aria-label="Итальянские авторы"></button>
             </li>
             <li class="languages-list__item">
               <button class="languages-list__btn languages-list__btn__russian" data-path="rus" aria-label="Русские авторы"></button>
@@ -748,7 +748,7 @@
         <p class="catalog__description">
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
         </p>
-        <div class="catalog__content-blocks catalog__content__active" data-target="fre">
+        <div class="catalog__content-blocks" data-target="fre">
           <div id="author-deyck" class="catalog__left-block" data-target="deyck">
             <img src="img/barthelemy-deyck.jpg" alt="Бартелеми д'Эйк" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
@@ -1219,8 +1219,8 @@
             </ul>
           </div>
         </div>
-        <div class="catalog__content-blocks" data-target="ita">
-          <div id="author-girlandayo" class="catalog__left-block" data-target="girlandayo">
+        <div class="catalog__content-blocks catalog__content__active" data-target="ita">
+          <div id="author-girlandayo" class="catalog__left-block catalog__left-block__active" data-target="girlandayo">
             <img src="img/girlandayo.jpg" alt="Доменико Гирландайо" class="catalog__image" loading="lazy">
             <h3 class="catalog__author-name">
               Доменико Гирландайо
@@ -1249,7 +1249,7 @@
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Бьяджо д’Антонио Туччи</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Веккьетта</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Андреа Верроккьо</a></li>
-                    <li class="authors-list__item"><a href="#author-girlandayo" class="authors-list__link" data-path="girlandayo">Доменико Гирландайо</a></li>
+                    <li class="authors-list__item"><a href="#author-girlandayo" class="authors-list__link authors-list__link__chosen" data-path="girlandayo">Доменико Гирландайо</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Беноццо Гоццоли</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Граначчи, Франческо</a></li>
                     <li class="authors-list__item"><a class="authors-list__link" href="#">Грегорио ди Чекко</a></li>
@@ -2276,7 +2276,7 @@
               Леонтьевский переулок, дом 5, строение 1
             </p>
             <p class="contacts__heading">Заказать обратный звонок</p>
-            <form action="https://jsonplaceholder.typicode.com/posts" class="contacts-form">
+            <form class="contacts-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'php/mail.php')">
               <label>
                 <input type="text" name="Name" id="Name" class="contacts-form__input" placeholder="Имя*" data-validate-field="name">
               </label>
@@ -2386,5 +2386,6 @@
   <script defer src="js/mobile-tooltips.js"></script>
   <script defer src="js/modal-windows.js"></script>
   <script defer src="js/smooth-scroll.js"></script>
+  <script defer src="js/mail-sending.js"></script>
 </body>
 </html>

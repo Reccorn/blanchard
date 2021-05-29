@@ -1,7 +1,7 @@
 $( function() {
     $( ".catalog__ages__italian-authors").accordion({
         collapsible: true,
-        active: true,
+        active: 0,
         heightStyle: 'content',
         header: '> .ages__item > .ages__item__number'
     });
