@@ -4,7 +4,7 @@ if (isset($_POST['Name'])) {$phone = $_POST['Name'];}
 if (isset($_POST['Phone'])) {$name = $_POST['Phone'];}
  
 
-$myaddres  = "reccorn@yandex .ru";
+$myaddres  = "raicords@gmail.com";
  
 $mes = "Тема: Заказ обратного звонка!\nТелефон: $Phone\nИмя: $Name";
  
