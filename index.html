@@ -2276,7 +2276,7 @@
               Леонтьевский переулок, дом 5, строение 1
             </p>
             <p class="contacts__heading">Заказать обратный звонок</p>
-            <form class="contacts-form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'php/mail.php')">
+            <form class="contacts-form" method="post" action="php/mail.php">
               <label>
                 <input type="text" name="Name" id="Name" class="contacts-form__input" placeholder="Имя*" data-validate-field="name">
               </label>
@@ -2386,6 +2386,6 @@
   <script defer src="js/mobile-tooltips.js"></script>
   <script defer src="js/modal-windows.js"></script>
   <script defer src="js/smooth-scroll.js"></script>
-  <script defer src="js/mail-sending.js"></script>
+<!--  <script defer src="js/mail-sending.js"></script>-->
 </body>
 </html>
