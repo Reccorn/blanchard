@@ -346,10 +346,12 @@ section {
 .nav-menu__link:focus::before {
   content: "";
   position: absolute;
+  z-index: 1;
   top: -4px;
   left: -6px;
   width: 115%;
   height: 29px;
+  /*background-color: var(--dark-purple);*/
   border: 2px solid var(--dark-purple);
 }
 
@@ -939,13 +941,15 @@ section {
 }
 
 .choices__list--dropdown .choices__item {
-  padding: 0;
+  padding: 0 20px;
+  color: #999999;
+  transition: .3s ease-in-out;
 }
 
-.choices__list--dropdown .choices__item {
-  padding-left: 20px;
-  color: #999999;
-}
+/*.choices__list--dropdown .choices__item {*/
+/*  padding-left: 20px;*/
+/*  color: #999999;*/
+/*}*/
 
 .choices__list--dropdown .choices__item:not(:last-child) {
   border-bottom: 1px solid #999999;
@@ -1301,6 +1305,10 @@ section {
   border: 2px solid var(--purple-color);
 }
 
+.languages-list__btn:focus {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
 .languages-list__btn__french {
   background: url("../img/french.png") no-repeat 45% 50%;
 }
@@ -1379,6 +1387,10 @@ section {
   line-height: 32px;
 }
 
+.catalog__author-text__no__author {
+  margin-bottom: 15px;
+}
+
 .catalog__right-block {
   width: 100%;
 }
@@ -1445,10 +1457,13 @@ section {
 }
 
 .catalog__ages .ui-accordion-header:active .ui-accordion-header-icon {
-  background-color: var(--dark-purple);
+  border: 2px solid var(--purple-color);
+  background-color: #D1A9F0;
 }
 
 .catalog__ages .ui-accordion-header-active .ui-accordion-header-icon {
+  border: 2px solid var(--purple-color);
+  background-color: #D1A9F0;
   transform: rotate(180deg);
 }
 
@@ -1460,35 +1475,86 @@ section {
   height: 290px;
 }
 
-.authors-list__link {
+.authors-list__btn {
   position: relative;
+  padding: 0;
   font-size: 16px;
   line-height: 32px;
   color: var(--black-color);
   cursor: pointer;
+  border-top: 0;
+  border-right: 0;
   border-bottom: 1px solid transparent;
+  border-left: 0;
+  background-color: transparent;
   transition: .3s ease-in-out;
   outline: none;
 }
 
-.authors-list__link:active {
+.authors-list__btn:active {
   color: var(--dark-purple);
   border-bottom: none;
 }
 
-.authors-list__link:focus::before {
+.authors-list__btn:focus::before {
   content: "";
   position: absolute;
-  top: -5px;
   left: -5px;
   width: calc(100% + 10px);
   height: 28px;
   border: 2px solid var(--dark-purple);
 }
 
-.authors-list__link__chosen {
+.authors-list__btn__chosen {
   font-weight: 600;
   color: var(--purple-color);
+}
+
+.ages__empty-block {
+  display: flex;
+}
+
+.empty-block__rect {
+  width: 275px;
+  height: 189px;
+  margin-right: 24px;
+  padding: 12px;
+  border: 2px solid #B7B7B7;
+}
+
+.empty-block__inner-rect {
+  width: 100%;
+  height: 100%;
+  background-color: #B7B7B7;
+}
+
+.empty-block__text-field {
+  padding: 40px 0;
+}
+
+.empty-block__heading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.empty-block__description {
+  width: 275px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.empty-block__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--purple-color);
+  transition: .3s ease-in-out;
+}
+
+.empty-block__link:active {
+  color: var(--dark-purple);
 }
 
 /* Events */
@@ -1933,12 +1999,13 @@ section {
   height: 16px;
   background: url("../img/tooltip.png") no-repeat;
   transform: translateY(2px);
+  transition: .3s ease-in-out;
   cursor: pointer;
 }
 
 .projects__popup {
   position: absolute;
-  bottom: 14px;
+  bottom: 20px;
   left: -124px;
   width: 264px;
   height: 59px;
@@ -1958,14 +2025,14 @@ section {
 .projects__popup__second {
   width: 264px;
   height: 74px;
-  background-image: url("../img/second-popup.png");
+  background-image: url("../img/second-tooltip.png");
 }
 
 .projects__popup__third {
   left: -108px;
   width: 232px;
   height: 42px;
-  background-image: url("../img/third-popup.png");
+  background-image: url("../img/third-tooltip.png");
 }
 
 .projects__blanchard-link {
@@ -2025,9 +2092,11 @@ section {
 .partners-list__item {
   width: calc((100% - 100px) / 3);
   height: 150px;
-  /*text-align: center;*/
-  /*line-height: 150px;*/
   border: 1px solid #cacaca;
+}
+
+.partners-list__item:active {
+  border-color: var(--purple-color);
 }
 
 .partners-list__link {
@@ -2127,6 +2196,7 @@ section {
   outline: none;
   border: 1px solid #333333;
   border-radius: 100px;
+  transition: .3s ease-in-out;
 }
 
 .contacts-form__btn {
@@ -2169,7 +2239,6 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: .3s ease-in-out;
 }
 
 .socials-list__item:not(:last-child) {
@@ -2179,6 +2248,11 @@ section {
 .socials-list__link {
   position: relative;
   outline: none;
+  transition: .3s ease-in-out;
+}
+
+.socials-list__link:active {
+  border: 1px solid #9643A4;
 }
 
 .socials-list__link:focus::before {
@@ -2272,8 +2346,12 @@ section {
   margin-right: 19px;
 }
 
-.footer-list__item svg path {
+.footer-list__link svg path {
   transition: .3s ease-out;
+}
+
+.footer-list__link:active svg path {
+  fill: var(--purple-color)
 }
 
 .footer-list__link {
@@ -2335,6 +2413,11 @@ section {
     border-color: #D1A9F0;
   }
 
+  .choices__list--dropdown .choices__item:hover {
+    color: var(--white-color);
+    background: rgba(255, 255, 255, 0.2);
+  }
+
   .gallery__authorisation-link:hover {
     color: var(--light-purple);
   }
@@ -2353,12 +2436,17 @@ section {
   }
 
   .catalog__ages .ui-accordion-header:hover .ui-accordion-header-icon {
-    background: url("../img/accordion-hover-icon.png") no-repeat center center var(--purple-color);
+    /*background: url("../img/accordion-hover-icon.png") no-repeat center center var(--purple-color);*/
+    background-color: #D1A9F0;
   }
 
-  .authors-list__link:hover {
+  .authors-list__btn:hover {
     color: var(--purple-color);
     border-bottom-color: var(--purple-color);
+  }
+
+  .empty-block__link:hover {
+    opacity: 0.5;
   }
 
   .events__more-btn:hover {
@@ -2382,6 +2470,10 @@ section {
 
   .publications__order-btn:hover {
     background-color: var(--purple-color);
+  }
+
+  .projects__tooltip:hover {
+    background-image: url("../img/hover-tooltip.png");
   }
 
   .projects__tooltip:hover .projects__popup {
@@ -2441,12 +2533,16 @@ section {
     background-color: var(--purple-color);
   }
 
-  .socials-list__item:hover {
-    box-shadow: 0 0 20px var(--purple-color);
+  .contacts-form__input:hover {
+    background-color: #eaeaea;
   }
 
-  .footer-list__item:hover svg path{
-    fill: var(--purple-color);
+  .socials-list__link:hover {
+    opacity: 0.5;
+  }
+
+  .footer-list__link:hover svg path{
+    fill: var(--white-color);
   }
 }
 
@@ -2564,7 +2660,7 @@ section {
   }
 
   .header-top__logo {
-    margin-right: 340px;
+    margin-right: 339px;
   }
 
   .header-top__logo__search-opened {
@@ -2752,8 +2848,25 @@ section {
     padding-bottom: 31px;
   }
 
-  .authors-list__link {
+  .authors-list__btn {
     margin-right: 55px;
+    line-height: 30px;
+  }
+
+  .empty-block__rect {
+    width: 189px;
+    height: 130px;
+    margin-right: 24px;
+    padding: 8px;
+    border: 2px solid #B7B7B7;
+  }
+
+  .empty-block__text-field {
+    padding: 0;
+  }
+
+  .empty-block__description {
+    width: 207px;
   }
 
   .events__item {
@@ -2834,7 +2947,7 @@ section {
     max-height: 64px;
     padding: 6px 10px;
     background-image: none;
-    background-color: #CACACA;
+    background-color: var(--purple-color);
   }
 
   .projects__popup__active {
@@ -3203,7 +3316,7 @@ section {
     padding-bottom: 17px;
   }
 
-  .authors-list__link {
+  .authors-list__btn {
     margin-right: 48px;
   }
 
@@ -3360,7 +3473,7 @@ section {
     max-height: 64px;
     padding: 6px 10px;
     background-image: none;
-    background-color: #CACACA;
+    background-color: var(--purple-color);
   }
 
   .projects__popup__active {
@@ -4053,8 +4166,27 @@ section {
     padding-bottom: 25px;
   }
 
-  .authors-list__link {
+  .authors-list__btn {
     margin-right: 0;
+    line-height: 30px;
+  }
+
+  .empty-block__rect {
+    width: 90px;
+    height: 130px;
+    padding: 4px;
+  }
+
+  .empty-block__text-field {
+    padding: 0;
+  }
+
+  .empty-block__heading {
+    font-size: 18px;
+  }
+
+  .empty-block__description {
+    width: 174px;
   }
 
   .section-events .container .section-heading {
@@ -4322,7 +4454,7 @@ section {
     max-height: 64px;
     padding: 6px 10px;
     background-image: none;
-    background-color: #CACACA;
+    background-color: var(--purple-color);
   }
 
   .projects__popup__active {
