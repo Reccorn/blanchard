@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.publications-form__checkbox').forEach(function (categoryActivating) {
+  document.querySelectorAll('.mobile-spoiler__checkbox').forEach(function (categoryActivating) {
     categoryActivating.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 
