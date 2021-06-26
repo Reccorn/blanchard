@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     openingTooltip.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 
-      const  activeTooltip = document.querySelector(`[data-path="${path}"]`);
-      activeTooltip.classList.toggle('projects__tooltip__active');
+      const activeTooltip = document.querySelector(`[data-path="${path}"]`);
+      const tooltip = document.getElementById(`${path}`);
+
+      tooltip.classList.toggle('projects__tooltip__clicked');
 
       document.querySelector(`[data-target="${path}"]`).classList.toggle('projects__popup__active');
 
