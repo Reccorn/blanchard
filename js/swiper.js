@@ -19,17 +19,23 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
       slidesPerColumnFill: 'column',
     },
     1440: {
-      spaceBetween: 20,
+      spaceBetween: 30,
       slidesPerColumn: 2,
       slidesPerView: 3,
       slidesPerGroup: 3,
     },
-    1920: {
+    1650: {
       spaceBetween: 50,
       slidesPerColumn: 2,
       slidesPerView: 3,
       slidesPerGroup: 3,
     },
+    // 1920: {
+    //   spaceBetween: 50,
+    //   slidesPerColumn: 2,
+    //   slidesPerView: 3,
+    //   slidesPerGroup: 3,
+    // },
   },
 
   pagination: {
@@ -59,15 +65,20 @@ const publicationsSwiper = new Swiper('.publications-swiper', {
       slidesPerGroup: 2,
     },
     1440: {
-      spaceBetween: 20,
+      spaceBetween: 30,
       slidesPerView: 3,
       slidesPerGroup: 3,
     },
-    1920: {
+    1650: {
       spaceBetween: 50,
       slidesPerView: 3,
       slidesPerGroup: 3,
     },
+    // 1920: {
+    //   spaceBetween: 50,
+    //   slidesPerView: 3,
+    //   slidesPerGroup: 3,
+    // },
   },
 
   pagination: {
@@ -98,13 +109,17 @@ const partnersSwiper = new Swiper('.project-swiper', {
       slidesPerView: 2,
     },
     1440: {
-      spaceBetween: 20,
+      spaceBetween: 30,
       slidesPerView: 3,
     },
-    1920: {
+    1650: {
       spaceBetween: 50,
       slidesPerView: 3,
     },
+    // 1920: {
+    //   spaceBetween: 50,
+    //   slidesPerView: 3,
+    // },
   },
 
   navigation: {
