@@ -322,10 +322,14 @@ section {
   border: 2px solid var(--dark-purple);
 }
 
+.header-top__logo {
+  margin-right: 30px;
+}
+
 .header-top__nav-menu {
   max-width: 896px;
   width: 100%;
-  margin-right: 90px;
+  margin-right: 120px;
 }
 
 .nav-menu__list {
@@ -368,6 +372,8 @@ section {
 
 .header-top__enter-link {
   position: relative;
+  min-width: 75px;
+  max-height: 25px;
   font-size: 18px;
   line-height: 25px;
   border: 0;
@@ -448,6 +454,7 @@ section {
 .header-bottom__menu-list {
   display: flex;
   justify-content: space-between;
+  max-width: 1031px;
 }
 
 .menu-list__item {
@@ -802,6 +809,8 @@ section {
   padding-top: 140px;
   padding-bottom: 120px;
   background-size: cover;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
   animation: hero 60s infinite ease-in-out, hero-images-1920 30s infinite ease-in-out;
   animation-direction: alternate;
 
@@ -877,7 +886,7 @@ section {
 }
 
 .about-us__description {
-  width: 1080px;
+  max-width: 1080px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -1208,7 +1217,7 @@ section {
 }
 
 .catalog__description {
-  width: 1080px;
+  max-width: 1080px;
   margin-top: 0;
   margin-bottom: 37px;
   font-size: 16px;
@@ -1228,7 +1237,7 @@ section {
 .catalog__left-block {
   display: none;
   max-width: 750px;
-  width: 100%;
+  width: calc(100% - 50px);
   margin-right: 50px;
 }
 
@@ -1260,7 +1269,7 @@ section {
 }
 
 .catalog__author-text {
-  width: 749px;
+  max-width: 749px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -1278,6 +1287,7 @@ section {
 .ages__item {
   width: 100%;
   align-items: center;
+  transition: .3s ease-in-out;
 }
 
 .ages__item:last-child {
@@ -1870,8 +1880,8 @@ section {
 }
 
 .projects__description {
-  width: 1080px;
-  height: 246px;
+  max-width: 1080px;
+  min-height: 246px;
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 16px;
@@ -2252,7 +2262,7 @@ section {
   fill: var(--purple-color)
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1025px) {
   .swiper-button-prev:hover svg path,
   .swiper-button-next:hover svg path {
     fill: var(--purple-color);
@@ -2320,6 +2330,14 @@ section {
 
   .catalog__ages .ui-accordion-header:hover {
     color: var(--purple-color);
+    border-color: var(--purple-color);
+  }
+
+  .ages__item:hover {
+    border-color: var(--purple-color);
+  }
+
+  .ages__item:hover + .ages__item .ui-accordion-header {
     border-color: var(--purple-color);
   }
 
@@ -2405,29 +2423,40 @@ section {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1680px) {
-  .section-hero {
-    height: 580px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-size: cover;
-    animation: hero 60s infinite ease-in-out, hero-images-1440 30s infinite ease-in-out;
-    animation-direction: alternate;
+@media (min-width: 1025px) and (max-width: 1680px) {
+  .nav-menu__item:not(:last-child) {
+    margin-right: 0;
   }
 
-  .hero__description {
-    margin-bottom: 40px;
+  .header-bottom__menu-list {
+    width: calc(100% - 300px);
+  }
+
+  .menu-list__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .section-hero {
+    animation: hero 60s infinite ease-in-out, hero-images-1024 30s infinite ease-in-out;
+  }
+
+  .ages__authors-list {
+    height: 450px;
   }
 
   .events__item:last-child {
     margin-right: 486px;
   }
+
+  .contacts__left-block {
+    padding-left: 15px;
+  }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .container {
-    width: 954px;
-    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .section-hero, .section-gallery, .section-catalog, .section-events {
@@ -2507,7 +2536,7 @@ section {
     border-radius: 100px;
   }
 
-  .nav-menu__item {
+  .nav-menu__item:not(:last-child) {
     margin-right: 0;
     font-size: 24px;
     line-height: 64px;
@@ -2781,7 +2810,7 @@ section {
   }
 
   .project-next-btn {
-    left: 893px;
+    /*left: 893px;*/
   }
 
   .project-swiper {
@@ -2861,11 +2890,9 @@ section {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 321px) and (max-width: 768px) {
   .container {
-    width: 698px;
-    margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 50px;
   }
 
   .section-hero {
@@ -2883,6 +2910,10 @@ section {
 
   .header-top__menu-btn {
     display: block;
+  }
+
+  .header-top__logo {
+    margin-right: 0;
   }
 
   .header-top__nav-menu {

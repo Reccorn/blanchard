@@ -1,7 +1,6 @@
 const gallerySwiper = new Swiper('.gallery-swiper', {
   direction: 'horizontal',
   loopFillGroupWithBlank: true,
-  slidesPerColumnFill: 'column',
 
   breakpoints: {
     320: {
@@ -9,33 +8,38 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
       slidesPerColumn: 1,
       slidesPerView: 1,
       slidesPerGroup: 1,
-      slidesPerColumnFill: 'row',
+      grid: {
+        rows: 1,
+        fill: 'row',
+      },
     },
     768: {
       spaceBetween: 34,
-      slidesPerColumn: 2,
       slidesPerView: 2,
       slidesPerGroup: 2,
-      slidesPerColumnFill: 'column',
+      grid: {
+        rows: 2,
+        fill: 'column',
+      },
+    },
+    1025: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      grid: {
+        rows: 2,
+        fill: 'column',
+      },
     },
     1440: {
-      spaceBetween: 30,
-      slidesPerColumn: 2,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-    },
-    1650: {
       spaceBetween: 50,
-      slidesPerColumn: 2,
       slidesPerView: 3,
       slidesPerGroup: 3,
+      grid: {
+        rows: 2,
+        fill: 'column',
+      },
     },
-    // 1920: {
-    //   spaceBetween: 50,
-    //   slidesPerColumn: 2,
-    //   slidesPerView: 3,
-    //   slidesPerGroup: 3,
-    // },
   },
 
   pagination: {
@@ -59,17 +63,17 @@ const publicationsSwiper = new Swiper('.publications-swiper', {
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
-    1024: {
+    // 1024: {
+    //   spaceBetween: 50,
+    //   slidesPerView: 2,
+    //   slidesPerGroup: 2,
+    // },
+    1025: {
       spaceBetween: 50,
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
-    1440: {
-      spaceBetween: 30,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-    },
-    1650: {
+    1250: {
       spaceBetween: 50,
       slidesPerView: 3,
       slidesPerGroup: 3,
@@ -104,15 +108,15 @@ const partnersSwiper = new Swiper('.project-swiper', {
       spaceBetween: 34,
       slidesPerView: 2,
     },
-    1024: {
-      spaceBetween: 50,
+    1025: {
+      spaceBetween: 20,
       slidesPerView: 2,
     },
-    1440: {
-      spaceBetween: 30,
+    1135: {
+      spaceBetween: 10,
       slidesPerView: 3,
     },
-    1650: {
+    1280: {
       spaceBetween: 50,
       slidesPerView: 3,
     },
