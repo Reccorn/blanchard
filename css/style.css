@@ -23,13 +23,21 @@
 }
 
 @keyframes hero {
-  from {background-size: 100%;}
-  to {background-size: 200%;}
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 200%;
+  }
 }
 
 @-webkit-keyframes hero {
-  from {background-size: 100%;}
-  to {background-size: 200%;}
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 200%;
+  }
 }
 
 @keyframes hero-images-1920 {
@@ -105,8 +113,12 @@
 }
 
 @keyframes catalog {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 * {
@@ -455,6 +467,7 @@ section {
   display: flex;
   justify-content: space-between;
   max-width: 1031px;
+  width: 100%;
 }
 
 .menu-list__item {
@@ -1156,17 +1169,17 @@ section {
 /* Catalog */
 .catalog__top-content {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-}
-
-.catalog__heading {
-  margin-right: 41px;
 }
 
 .catalog__languages-list {
   display: flex;
   justify-content: space-between;
-  width: 430px;
+  flex-wrap: wrap;
+  max-width: 445px;
+  width: 100%;
   margin-bottom: 11px;
   align-items: center;
 }
@@ -1618,6 +1631,13 @@ section {
   margin-bottom: 18px;
 }
 
+.publications__form-heading {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white-color);
+}
+
 .publications-form {
   display: flex;
   flex-direction: column;
@@ -2059,8 +2079,8 @@ section {
 .contacts__left-block {
   position: relative;
   width: 100%;
-  max-width: 682px;
-  height: 700px;
+  max-width: 700px;
+  height: 682px;
   padding: 122px 122px 124px 150px;
   align-items: center;
   border: 1px solid #CACACA;
@@ -2418,7 +2438,7 @@ section {
     opacity: 0.5;
   }
 
-  .footer-list__link:hover svg path{
+  .footer-list__link:hover svg path {
     fill: var(--white-color);
   }
 }
@@ -2523,6 +2543,7 @@ section {
   .menu-block .header-top__enter-link {
     display: block;
     width: 257px;
+    max-height: 63px;
     padding: 17px 88px;
     border: 2px solid var(--purple-color);
     border-radius: 100px;
@@ -2536,10 +2557,13 @@ section {
     border-radius: 100px;
   }
 
-  .nav-menu__item:not(:last-child) {
-    margin-right: 0;
+  .nav-menu__item {
     font-size: 24px;
     line-height: 64px;
+  }
+
+  .nav-menu__item:not(:last-child) {
+    margin-right: 0;
   }
 
   .nav-menu__link:focus::before {
@@ -2596,7 +2620,7 @@ section {
   }
 
   .gallery__right-block {
-    width: 594px;
+    width: calc(100% - 330px);
   }
 
   .gallery-swiper {
@@ -2650,12 +2674,15 @@ section {
   }
 
   .catalog__author-text {
-    width: 436px;
+    max-width: 436px;
   }
 
   .ages__authors-list {
-    width: 437px;
-    height: 385px;
+    max-width: 437px;
+    min-width: 385px;
+    width: 100%;
+    min-height: 385px;
+    align-content: space-between;
   }
 
   .catalog__ages .ui-accordion-content {
@@ -2663,7 +2690,7 @@ section {
   }
 
   .authors-list__item:first-child {
-    width: 259px;
+    max-width: 259px;
   }
 
   .authors-list__btn {
@@ -2717,7 +2744,7 @@ section {
   }
 
   .events__description {
-    width: 222px;
+    max-width: 222px;
     padding-right: 0;
   }
 
@@ -2739,11 +2766,11 @@ section {
   }
 
   .publications__right-block {
-    width: 630px;
+    width: calc(100% - 295px);
   }
 
   .publications-swiper {
-    height: 530px;
+    min-height: 530px;
   }
 
   .publications-swiper .swiper-button-next, .publications-swiper .swiper-button-prev {
@@ -2765,7 +2792,7 @@ section {
 
   .projects__description {
     width: 100%;
-    height: 278px;
+    min-height: 278px;
   }
 
   .publications__swiper-slide:nth-child(1n + 5) .publications__item .publications__description .publications__name {
@@ -2810,11 +2837,11 @@ section {
   }
 
   .project-next-btn {
-    /*left: 893px;*/
+    left: 97%;
   }
 
   .project-swiper {
-    width: 818px;
+    width: calc(100% - 106px);
   }
 
   .project-swiper .swiper-slide {
@@ -2829,8 +2856,6 @@ section {
   .contacts__left-block {
     width: 487px;
     height: 700px;
-    /*padding-left: 50px;*/
-    /*padding-right: 102px;*/
     padding: 123px 66px 103px 50px;
   }
 
@@ -2869,6 +2894,10 @@ section {
     display: none;
   }
 
+  .contacts__right-block {
+    min-width: 280px;
+  }
+
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -2890,7 +2919,7 @@ section {
   }
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 681px) and (max-width: 768px) {
   .container {
     padding: 0 50px;
   }
@@ -2990,12 +3019,15 @@ section {
 
   .header-top__search-btn {
     display: block;
+    width: 27px;
+    height: 27px;
     padding: 0;
   }
 
   .menu-block .header-top__enter-link {
     display: block;
     width: 257px;
+    max-height: 63px;
     padding: 17px 88px;
     border: 2px solid var(--purple-color);
     border-radius: 100px;
@@ -3008,7 +3040,7 @@ section {
   }
 
   .section-hero {
-    height: 668px;
+    min-height: 668px;
     padding-top: 107px;
     padding-bottom: 114px;
     background-size: cover;
@@ -3017,12 +3049,15 @@ section {
   }
 
   .hero__heading {
+    max-width: 570px;
+    width: 100%;
     margin-bottom: 13px;
     padding-top: 5px;
   }
 
   .hero__description {
-    width: 661px;
+    max-width: 661px;
+    width: 100%;
     margin-bottom: 133px;
   }
 
@@ -3075,7 +3110,7 @@ section {
 
   .gallery__authorisation-text__mobile {
     display: block;
-    width: 668px;
+    max-width: 668px;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 600;
@@ -3123,7 +3158,8 @@ section {
     width: 100%;
   }
 
-   .catalog__right-block {
+  .catalog__right-block {
+    width: 100%;
     margin-bottom: 47px;
   }
 
@@ -3134,12 +3170,15 @@ section {
   }
 
   .catalog__author-text {
-    width: 667px;
+    max-width: 667px;
+    width: 100%;
   }
 
   .ages__authors-list {
     width: 100%;
     height: 300px;
+    align-content: space-between;
+    /*overflow: scroll;*/
   }
 
   .catalog__ages .ui-accordion-content {
@@ -3147,7 +3186,7 @@ section {
   }
 
   .authors-list__item {
-    margin-right: 35px;
+    margin-right: 10px;
     margin-bottom: 1px;
   }
 
@@ -3180,7 +3219,7 @@ section {
   }
 
   .events__heading {
-    width: 253px;
+    max-width: 253px;
     padding-right: 0;
   }
 
@@ -3190,7 +3229,7 @@ section {
   }
 
   .events__description {
-    width: 243px;
+    max-width: 243px;
   }
 
   .events__more-btn {
@@ -3198,7 +3237,7 @@ section {
   }
 
   .section-publications {
-    height: 1048px;
+    height: 1084px;
     background: url("../img/publications-image-768.png") no-repeat;
     background-size: cover;
   }
@@ -3211,27 +3250,29 @@ section {
 
   .publications-form {
     flex-wrap: wrap;
-    height: 160px;
+    justify-content: flex-start;
+    height: 155px;
+    align-content: space-between;
+    /*overflow: scroll;*/
   }
 
   .publications-form__label {
-    margin-right: 60px;
+    max-width: 182px;
+    width: 100%;
+    padding-left: 23px;
+    line-height: 31px;
   }
 
-  .publications-form__label:nth-child(6) {
-    margin-top: 32px;
-  }
-
-  .publications-form__label:nth-child(10) {
-    margin-top: 32px;
+  .publications-form__checkbox {
+    display: none;
   }
 
   .publications__right-block {
-    width: 668px;
+    width: 100%;
   }
 
   .publications-swiper {
-    width: 645px;
+    max-width: 645px;
     height: 550px;
     margin: 0;
     padding-left: 27px;
@@ -3254,7 +3295,7 @@ section {
   }
 
   .publications__swiper-slide {
-    min-width: 290px;
+    max-width: 290px;
   }
 
   .publications__image {
@@ -3291,8 +3332,8 @@ section {
   }
 
   .projects__description {
-    width: 659px;
-    height: 444px;
+    max-width: 659px;
+    min-height: 444px;
   }
 
   .projects__popup {
@@ -3314,12 +3355,17 @@ section {
     height: 32px;
   }
 
+  .projects__blanchard-link {
+    white-space: nowrap;
+  }
+
   .project-swiper__buttons {
     margin-bottom: 29px;
   }
 
   .project-swiper {
-    width: 562px;
+    max-width: 562px;
+    width: calc(100% - 106px);
   }
 
   .project-prev-btn, .project-next-btn {
@@ -3327,16 +3373,22 @@ section {
   }
 
   .project-next-btn {
-    left: 638px;
+    left: 95%;
+  }
+
+  .project-wrapper {
+    width: 100%;
   }
 
   .project-swiper .swiper-slide {
-    width: 264px;
+    max-width: 264px;
+    width: 100%;
     height: 106px;
   }
 
   .partners__link img {
     max-width: 210px;
+    width: 100%;
     max-height: 55px;
   }
 
@@ -3345,22 +3397,29 @@ section {
   }
 
   .contacts__left-block {
-    width: 430px;
+    max-width: 430px;
+    width: 100%;
     height: 700px;
     padding-left: 50px;
     padding-right: 45px;
+    padding-bottom: 0;
   }
 
   .block-heading {
     margin-bottom: 5px;
   }
 
+  .contacts__heading {
+    max-width: 333px;
+  }
+
   .contacts__address-string {
-    width: 370px;
+    max-width: 370px;
   }
 
   .contacts-form__input {
-    width: 335px;
+    max-width: 335px;
+    width: 100%;
   }
 
   .socials-block__heading {
@@ -3368,7 +3427,7 @@ section {
   }
 
   .socials-list__item {
-    width: 60px;
+    max-width: 60px;
     height: 60px;
     transform: translateY(-4px);
   }
@@ -3388,6 +3447,10 @@ section {
 
   .address-string__mobile {
     display: none;
+  }
+
+  .contacts__right-block {
+    min-width: 150px;
   }
 
   .footer {
@@ -3411,16 +3474,15 @@ section {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 680px) {
   main {
     padding-top: 45px;
   }
 
   .container {
-    width: 290px;
+    /*width: 290px;*/
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 15px;
   }
 
   .section-hero, .section-catalog, .section-events, .section-projects {
@@ -3453,12 +3515,17 @@ section {
 
   .header-top__menu-btn {
     display: block;
-    width: 20px;
-    height: 15px;
+    width: 25px;
+    height: 18px;
+    background-size: contain;
   }
 
   .header-top__nav-menu {
     display: none;
+  }
+
+  .header-top__logo {
+    margin-right: 0;
   }
 
   .logo {
@@ -3519,14 +3586,14 @@ section {
   }
 
   .form-search__btn {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     margin-right: 3px;
   }
 
   .form-search__btn svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 
   .form-search__input {
@@ -3545,8 +3612,8 @@ section {
   }
 
   .header-top__search-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 
   .menu-block {
@@ -3580,7 +3647,8 @@ section {
   }
 
   .section-hero {
-    height: 310px;
+    min-height: 310px;
+    max-height: 310px;
     padding-top: 30px;
     padding-bottom: 45px;
     background-size: cover;
@@ -3589,7 +3657,8 @@ section {
   }
 
   .hero__heading {
-    width: 258px;
+    min-width: 258px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
@@ -3600,7 +3669,8 @@ section {
   }
 
   .hero__description {
-    width: 265px;
+    min-width: 265px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -3702,14 +3772,17 @@ section {
   }
 
   .gallery__swiper-slide {
-    max-width: 290px;
+    max-width: 650px;
+    min-width: 290px;
+    width: 100%;
     height: 367px;
     margin-top: 0;
   }
 
   .gallery__authorisation-text__mobile {
     display: block;
-    width: 290px;
+    min-width: 290px;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 600;
@@ -3842,7 +3915,9 @@ section {
   }
 
   .catalog__author-text {
-    width: 289px;
+    /*width: 289px;*/
+    width: 100%;
+    padding: 0 1px;
   }
 
   .ages__authors-list {
@@ -3941,7 +4016,7 @@ section {
   }
 
   .events__list .swiper-slide {
-    width: 290px;
+    min-width: 290px;
   }
 
   .events__image {
@@ -3953,7 +4028,9 @@ section {
   }
 
   .events__heading {
-    width: 244px;
+    min-width: 244px;
+    max-width: 550px;
+    width: 100%;
   }
 
   .events__heading__margin-bottom {
@@ -3966,7 +4043,9 @@ section {
   }
 
   .events__description {
-    width: 235px;
+    min-width: 235px;
+    max-width: 550px;
+    width: 100%;
     padding-right: 0;
   }
 
@@ -3992,7 +4071,9 @@ section {
   .publications__content-blocks {
     justify-content: normal;
     flex-direction: column;
-    padding: 50px 0;
+    /*padding: 50px 0;*/
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .publications__left-block {
@@ -4025,7 +4106,7 @@ section {
   .mobile-spoiler__heading .ui-accordion-header-icon {
     position: absolute;
     top: 12px;
-    left: 275px;
+    right: 0;
     width: 16px;
     height: 16px;
     background: url("../img/publications-accordion-icon.png") no-repeat center;
@@ -4100,7 +4181,8 @@ section {
   }
 
   .publications__image {
-    width: 130px;
+    /*width: 130px;*/
+    width: 100%;
     height: 143px;
     margin-bottom: 9px;
   }
@@ -4131,7 +4213,7 @@ section {
 
   .projects__description {
     width: 100%;
-    height: 1046px;
+    /*height: 1046px;*/
     margin-bottom: 20px;
   }
 
@@ -4175,7 +4257,8 @@ section {
   }
 
   .project-swiper {
-    width: 195px;
+    /*width: 195px;*/
+    width: calc(100% - 94px);
     height: 65px;
   }
 
@@ -4188,15 +4271,19 @@ section {
   }
 
   .project-next-btn {
-    left: 260px;
+    /*left: 260px;*/
+    left: 92%;
   }
 
   .project-swiper .swiper-slide {
+    max-width: 550px;
+    width: 100%;
     height: 65px;
   }
 
   .partners__link img {
     max-width: 142px;
+    width: 100%;
     max-height: 25px;
   }
 

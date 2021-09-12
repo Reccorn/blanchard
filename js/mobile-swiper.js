@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const pageWidth = window.matchMedia('(max-width: 767px)');
+  const pageWidth = window.matchMedia('(max-width: 680px)');
 
   function createMobileSwiper() {
     document.querySelector('.events__swiper-container').classList.add('events__mobile-swiper');

@@ -3,7 +3,7 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   loopFillGroupWithBlank: true,
 
   breakpoints: {
-    320: {
+    0: {
       spaceBetween: 20,
       slidesPerColumn: 1,
       slidesPerView: 1,
@@ -13,7 +13,7 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
         fill: 'row',
       },
     },
-    768: {
+    681: {
       spaceBetween: 34,
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -58,16 +58,11 @@ const publicationsSwiper = new Swiper('.publications-swiper', {
   loopFillGroupWithBlank: true,
 
   breakpoints: {
-    768: {
+    681: {
       spaceBetween: 34,
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
-    // 1024: {
-    //   spaceBetween: 50,
-    //   slidesPerView: 2,
-    //   slidesPerGroup: 2,
-    // },
     1025: {
       spaceBetween: 50,
       slidesPerView: 2,
@@ -78,11 +73,6 @@ const publicationsSwiper = new Swiper('.publications-swiper', {
       slidesPerView: 3,
       slidesPerGroup: 3,
     },
-    // 1920: {
-    //   spaceBetween: 50,
-    //   slidesPerView: 3,
-    //   slidesPerGroup: 3,
-    // },
   },
 
   pagination: {
@@ -100,15 +90,15 @@ const partnersSwiper = new Swiper('.project-swiper', {
   direction: 'horizontal',
 
   breakpoints: {
-    320: {
+    0: {
       spaceBetween: 20,
       slidesPerView: 1,
     },
-    768: {
+    681: {
       spaceBetween: 34,
       slidesPerView: 2,
     },
-    1025: {
+    769: {
       spaceBetween: 20,
       slidesPerView: 2,
     },
@@ -120,10 +110,6 @@ const partnersSwiper = new Swiper('.project-swiper', {
       spaceBetween: 50,
       slidesPerView: 3,
     },
-    // 1920: {
-    //   spaceBetween: 50,
-    //   slidesPerView: 3,
-    // },
   },
 
   navigation: {
