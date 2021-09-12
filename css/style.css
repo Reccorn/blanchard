@@ -3633,6 +3633,7 @@ section {
   .menu-block .header-top__enter-link {
     display: block;
     width: 115px;
+    max-height: 40px;
     padding: 8px 28px;
     font-size: 12px;
     line-height: 16px;
