@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const windowWidth = window.matchMedia('(max-width: 1439px)');
+  const windowWidth = window.matchMedia('(max-width: 1024px)');
   let anchors = document.querySelectorAll('button[name*="#author"]');
 
   function f() {

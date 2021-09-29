@@ -22,7 +22,7 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
         fill: 'column',
       },
     },
-    1025: {
+    1251: {
       spaceBetween: 30,
       slidesPerView: 3,
       slidesPerGroup: 3,
@@ -94,18 +94,18 @@ const partnersSwiper = new Swiper('.project-swiper', {
       spaceBetween: 20,
       slidesPerView: 1,
     },
-    681: {
+    701: {
       spaceBetween: 34,
       slidesPerView: 2,
     },
     769: {
-      spaceBetween: 20,
+      spaceBetween: 50,
       slidesPerView: 2,
     },
-    1135: {
-      spaceBetween: 10,
-      slidesPerView: 3,
-    },
+    // 1251: {
+    //   spaceBetween: 10,
+    //   slidesPerView: 3,
+    // },
     1280: {
       spaceBetween: 50,
       slidesPerView: 3,
