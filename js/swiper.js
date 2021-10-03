@@ -58,8 +58,13 @@ const publicationsSwiper = new Swiper('.publications-swiper', {
   loopFillGroupWithBlank: true,
 
   breakpoints: {
-    681: {
+    321: {
       spaceBetween: 34,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    769: {
+      spaceBetween: 50,
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
@@ -102,10 +107,6 @@ const partnersSwiper = new Swiper('.project-swiper', {
       spaceBetween: 50,
       slidesPerView: 2,
     },
-    // 1251: {
-    //   spaceBetween: 10,
-    //   slidesPerView: 3,
-    // },
     1280: {
       spaceBetween: 50,
       slidesPerView: 3,

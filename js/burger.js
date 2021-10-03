@@ -7,9 +7,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-// document.addEventListener('click', function (e) {
-//   if (!e.target.classList.contains('.menu-block__active') || e.target.classList.contains('.menu__close-btn')) {
-//     document.querySelector('#burger-menu').classList.remove('menu-block__active');
-//   }
-// });

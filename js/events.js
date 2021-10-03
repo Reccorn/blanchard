@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   eventsButton.addEventListener('click', function () {
     document.querySelectorAll('.events__item').forEach(function (event) {
-      event.style.display = "block";
+      event.style.display = "flex";
     });
 
-    document.querySelectorAll('.events__item:nth-child(3n + 1)').forEach(function (item) {
+    document.querySelectorAll('.events__item').forEach(function (item) {
       item.classList.add('events__item__margin');
     });
 
