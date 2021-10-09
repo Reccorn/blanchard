@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.header-top__logo').classList.add('header-top__logo__search-opened');
 
     // document.addEventListener('click', function (b) {
-    //   if (b.target !== searchBlock) {
+    //   if (!b.target.classList.contains('header-top__search-block__active')) {
     //     searchBtn.classList.remove('header-top__search-btn__clicked');
     //     searchBlock.classList.remove('header-top__search-block__active');
     //     document.querySelector('.header-top__logo').classList.remove('header-top__logo__search-opened');

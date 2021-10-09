@@ -13,7 +13,7 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
         fill: 'row',
       },
     },
-    681: {
+    701: {
       spaceBetween: 34,
       slidesPerView: 2,
       slidesPerGroup: 2,
