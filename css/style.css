@@ -1915,6 +1915,10 @@ section {
   outline: none;
 }
 
+.projects__tooltip svg {
+  pointer-events: none;
+}
+
 .projects__tooltip:focus svg {
   fill: #D1A9F0;
 }
@@ -2508,7 +2512,11 @@ section {
 
   .header-top__search-btn {
     display: block;
-    transform: translateX(-5px);
+    padding: 0;
+  }
+
+  .header-top__search-btn svg {
+    pointer-events: none;
   }
 
   .header-top__search-btn__clicked {
@@ -3019,6 +3027,7 @@ section {
   .header-top__search-btn svg {
     width: 27px;
     height: 27px;
+    pointer-events: none;
   }
 
   .form-search__btn {
@@ -3679,6 +3688,7 @@ section {
   .header-top__search-btn svg {
     width: 18px;
     height: 18px;
+    pointer-events: none;
   }
 
   .menu-block {
@@ -3826,6 +3836,14 @@ section {
     z-index: 10;
     width: 290px;
     margin-bottom: 40px;
+  }
+
+  .is-open {
+    margin-bottom: 100px;
+  }
+
+  .choices__inner {
+    min-height: 40px;
   }
 
   .choices__item:not(:first-child) {
