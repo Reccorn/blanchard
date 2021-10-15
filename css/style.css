@@ -1237,10 +1237,17 @@ section {
 }
 
 .catalog__left-block {
+  position: relative;
   display: none;
   max-width: 750px;
   width: calc(100% - 50px);
   margin-right: 50px;
+}
+
+.catalog__left-block__anchor {
+  position: absolute;
+  top: -15px;
+  z-index: -1;
 }
 
 .catalog__left-block__active {
@@ -2109,6 +2116,10 @@ section {
   margin-bottom: 38px;
 }
 
+.contacts-form label {
+  position: relative;
+}
+
 .contacts-form__input {
   width: 400px;
   height: 40px;
@@ -2121,6 +2132,12 @@ section {
 
 .contacts-form__input:focus {
   background-color: #EAEAEA;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: -20px;
+  padding-left: 20px;
 }
 
 .contacts-form__btn {
@@ -3682,6 +3699,8 @@ section {
 
   .header-top__search-btn {
     display: block;
+    width: 18px;
+    height: 18px;
     padding: 0;
   }
 
@@ -3838,16 +3857,13 @@ section {
     margin-bottom: 40px;
   }
 
-  .is-open {
-    margin-bottom: 100px;
-  }
-
   .choices__inner {
     min-height: 40px;
   }
 
   .choices__item:not(:first-child) {
     padding: 5px 20px;
+    background-color: white;
   }
 
   .gallery__authorisation-text {
@@ -4037,9 +4053,13 @@ section {
 
   .ages__authors-list {
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 208px;
     height: 766px;
+  }
+
+  .catalog__ages__italian-authors .ages__authors-list {
+    justify-content: space-between;
   }
 
   .catalog__ages .ui-accordion-content {

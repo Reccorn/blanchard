@@ -17,5 +17,14 @@ new JustValidate('.contacts-form', {
         return Number(phone) && phone.length === 10;
       }
     }
+  },
+
+  messages: {
+    name: {
+      required: 'Поле обязательно для заполнения'
+    },
+    tel: {
+      required: 'Поле обязательно для заполнения'
+    }
   }
 });
