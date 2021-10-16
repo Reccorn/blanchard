@@ -1620,10 +1620,6 @@ section {
 
 .publications__mobile-spoiler {
   display: none;
-}
-
-.publications__chosen-category {
-  display: none;
   margin-bottom: 18px;
 }
 
@@ -4236,46 +4232,51 @@ section {
     display: block;
   }
 
-  .publications__chosen-category {
-    display: block;
-  }
-
   .publications-form {
     display: none;
   }
 
   .mobile-spoiler__heading {
     position: relative;
+    display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 3px 0;
     font-size: 16px;
     line-height: 32px;
+    align-items: center;
     color: var(--white-color);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
-  .mobile-spoiler__heading .ui-accordion-header-icon {
-    position: absolute;
-    top: 12px;
-    right: 0;
-    width: 16px;
-    height: 16px;
-    background: url("../img/publications-accordion-icon.png") no-repeat center;
-    transition: .3s ease-out;
+  .mobile-spoiler__heading svg {
+    transition: transform .3s ease-in-out;
   }
 
-  .publications__mobile-spoiler .ui-accordion-header-active .ui-accordion-header-icon {
+  .mobile-spoiler__heading__active svg {
     transform: rotate(180deg);
   }
 
   .categories-list__item {
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 7px;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: .2s ease-in-out;
+  }
+
+  .categories-list__item__active {
+    display: flex;
+  }
+
+  .categories-list__item__animated {
+    opacity: 1;
+    transform: none;
   }
 
   .publications-form__label {
@@ -4291,21 +4292,17 @@ section {
     margin-bottom: 0;
   }
 
-  .publications__chosen-category__active {
-    display: block;
-    margin-bottom: 18px;
-  }
-
-  .categories-list__item__hidden {
-    display: none;
-  }
-
   .categories-list__close-button {
+    display: none;
     width: 12px;
     height: 12px;
     padding: 0;
     border: 0;
     background: url("../img/spoiler-cross.png") no-repeat;
+  }
+
+  .categories-list__close-button__active {
+    display: block;
   }
 
   .publications__right-block {

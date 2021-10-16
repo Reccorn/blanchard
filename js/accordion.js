@@ -43,11 +43,11 @@ $( function() {
     });
 } );
 
-$( function() {
-    $( ".publications__mobile-spoiler").accordion({
-        collapsible: true,
-        active: false,
-        heightStyle: 'content',
-        header: '> .mobile-spoiler__heading'
-    });
-} );
+// $( function() {
+//     $( ".publications__mobile-spoiler").accordion({
+//         collapsible: true,
+//         active: false,
+//         heightStyle: 'content',
+//         header: '> .mobile-spoiler__heading'
+//     });
+// } );
