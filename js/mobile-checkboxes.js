@@ -4,31 +4,24 @@ document.addEventListener('DOMContentLoaded', function () {
   const items = document.querySelectorAll('.categories-list__item');
 
   items.forEach(item => {
-    const closeBtn = item.querySelector('.categories-list__close-button');
-
     if (item.querySelector('input').checked) {
+      item.classList.add('categories-list__item__clicked');
       itemToggling(item, 'show');
-
-      closeBtn.classList.add('categories-list__close-button__active');
-
-      closeBtn.addEventListener('click', function () {
-        itemClosing(item, closeBtn);
-      });
     }
 
     item.querySelector('input').addEventListener('click', function () {
       if (!item.querySelector('input').checked) {
+        item.classList.remove('categories-list__item__clicked');
         if (!spoilerList.classList.contains('mobile-spoiler__categories-list__active')) {
           itemToggling(item, 'hide');
-
-          closeBtn.classList.remove('categories-list__close-button__active');
         }
+      } else {
+        item.classList.add('categories-list__item__clicked');
       }
     });
   });
 
   spoilerBtn.addEventListener('click', spoilerToggling);
-
 
   function spoilerToggling() {
     if (!spoilerList.classList.contains('mobile-spoiler__categories-list__active')) {
@@ -45,17 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
       spoilerList.classList.remove('mobile-spoiler__categories-list__active');
 
       items.forEach(item => {
-        const closeBtn = item.querySelector('.categories-list__close-button');
-
         if (item.querySelector('input').checked) {
+          item.classList.add('categories-list__item__clicked');
           itemToggling(item, 'show');
-
-          closeBtn.classList.add('categories-list__close-button__active');
-
-          closeBtn.addEventListener('click', function () {
-            itemClosing(item, closeBtn);
-          });
         } else {
+          item.classList.remove('categories-list__item__clicked');
           itemToggling(item, 'hide');
         }
       });
@@ -74,13 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
         item.classList.remove('categories-list__item__active');
       }, 300);
     }
-  }
-
-  function itemClosing(item, btn) {
-    itemToggling(item, 'hide');
-
-    item.querySelector('input').checked = false;
-
-    btn.classList.remove('categories-list__close-button__active');
   }
 });
